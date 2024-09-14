@@ -3,10 +3,13 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from webdriver_manager.firefox import GeckoDriverManager
 import time
 import re
+import sys
+
+__version__ = "1.0.0"
 
 
 def setup_web_driver(debug):
@@ -40,7 +43,7 @@ def load_site(driver, index, debug, value):
 
 def accept_cookies(wait, debug, cookies_element_id):
     # Wait for the accept cookies button element to be present and clickable
-    cookies_button = wait.until(EC.element_to_be_clickable((By.ID, cookies_element_id)))
+    cookies_button = wait.until(ec.element_to_be_clickable((By.ID, cookies_element_id)))
     cookies_button.click()
     if debug:
         print("Cookies accepted clicked successfully.")
@@ -49,7 +52,7 @@ def accept_cookies(wait, debug, cookies_element_id):
 def select_and_parse_xmr_value(wait, debug):
     # Wait for all input elements with the specified aria-label to be present
     input_elements = wait.until(
-        EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'input[aria-label="Currency Amount Field"]')))
+        ec.presence_of_all_elements_located((By.CSS_SELECTOR, 'input[aria-label="Currency Amount Field"]')))
     if len(input_elements) > 1:
         # Select the second instance (index 1) if available
         second_input_element = input_elements[1]
@@ -65,7 +68,7 @@ def select_and_parse_xmr_value(wait, debug):
 
 def select_and_parse_ltc_value(wait, debug):
     # Wait for the input element with the ID 'amount-field' to be present
-    amount_field = wait.until(EC.presence_of_element_located((By.ID, 'amount-field')))
+    amount_field = wait.until(ec.presence_of_element_located((By.ID, 'amount-field')))
     # Extract the value attribute
     ltc_amount = amount_field.get_attribute("value")
     # Convert to floating point number
@@ -77,7 +80,7 @@ def select_and_parse_ltc_value(wait, debug):
 
 def select_and_parse_gbp_value(wait, debug):
     # Wait for the span element with the class name 'new-stepper-hints__rate' to be present
-    span_element = wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'new-stepper-hints__rate')))
+    span_element = wait.until(ec.presence_of_element_located((By.CLASS_NAME, 'new-stepper-hints__rate')))
     # Extract the text from the span element
     span_text = span_element.text
     # Use regular expression to extract the number after '=' and before 'GBP'
@@ -101,6 +104,10 @@ def calculate_final_price(debug, gbp_value, ltc_rate, xmr_fees_total):
 
 
 def main():
+    if "--version" in sys.argv:
+        print(__version__)
+        return
+    print("Running application version", __version__)
     try:
         # Variables setup
         debug = False  # Enable for debug messages
@@ -132,6 +139,7 @@ def main():
         input("Press Enter to exit...")
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     main()

@@ -24,10 +24,10 @@ def check_for_update(current_version, latest_version_url):
 
 def main():
     app_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-    app_exe_path = os.path.join(app_dir, "application.exe")
+    app_exe_path = os.path.join(app_dir, "Get_Fees.exe")
     current_version = get_current_version(app_exe_path)
     owner = "MDMAinsley"
-    repo = "python-auto-updates"
+    repo = "feesnfees"
     latest_version_url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
     updater_path = os.path.join(app_dir, "updater.exe")
 

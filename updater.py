@@ -16,7 +16,7 @@ def main():
     owner = "MDMAinsley"
     repo = "feesnfees"
     app_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-    current_exe_path = os.path.join(app_dir, "application.exe")
+    current_exe_path = os.path.join(app_dir, "Get_Fees.exe")
     download_path = os.path.join(app_dir, "latest_version.exe")
     url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
 
