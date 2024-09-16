@@ -12,21 +12,22 @@ import time
 import re
 import sys
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 settings_file = 'settings.json'
 
 # Variables setup
 item_purchase_price = 109  # Wanted item's purchase price
-debug = False  # Enable for debug messages
+debug = True  # Enable for debug messages
 xmr_fees_total = 0.5  # Change when needed
 cookies_element_id = "L2AGLb"  # Change when needed
 
 
+# Function to create the webdriver instance with necessary settings and wait conditions
 def setup_web_driver():
     # Set up Firefox options
     options = FirefoxOptions()
-    options.headless = True  # Run in headless mode
+    options.add_argument("--headless")  # Enable headless mode explicitly
 
     # Automatically downloads and sets up the latest GeckoDriver
     service = FirefoxService(GeckoDriverManager().install())
@@ -39,6 +40,7 @@ def setup_web_driver():
     return driver, wait
 
 
+# Function to handle different website loading on current webdriver instance
 def load_site(driver, index, xmr_trade_value):
     if index == 0:
         driver.get(f"https://www.google.com/search?q={item_purchase_price}gbp+to+xmr")
@@ -52,6 +54,7 @@ def load_site(driver, index, xmr_trade_value):
         print(f"DEBUG: Site index{index}: Loaded successfully.")
 
 
+# Function to accept Googles cookies pop-up
 def accept_cookies(wait):
     # Wait for the accept cookies button element to be present and clickable
     cookies_button = wait.until(ec.element_to_be_clickable((By.ID, cookies_element_id)))
@@ -60,6 +63,7 @@ def accept_cookies(wait):
         print("DEBUG: 'Accept' cookies button clicked successfully.")
 
 
+# Function to obtain the current GBP item price in XMR using Google's latest conversion rate
 def select_and_parse_xmr_value(wait):
     # Wait for all input elements with the specified aria-label to be present
     input_elements = wait.until(
@@ -78,6 +82,7 @@ def select_and_parse_xmr_value(wait):
             print("ERROR: Less than two elements found with the specified aria-label.")
 
 
+# Function to obtain the current XMR item value in LTC on CHANGENOW's platform
 def select_and_parse_ltc_value(wait):
     # Wait for the input element with the ID 'amount-field' to be present
     amount_field = wait.until(ec.presence_of_element_located((By.ID, 'amount-field')))
@@ -85,10 +90,11 @@ def select_and_parse_ltc_value(wait):
     scraped_value = amount_field.get_attribute("value")
     xmr_to_ltc_value = float(scraped_value)
     if debug:
-        print("DEBUG: Successfully scraped CHANGENOW'S XMR to LTC value.")
+        print(f"DEBUG: Successfully scraped CHANGENOW's XMR to LTC value: {xmr_to_ltc_value}")
     return xmr_to_ltc_value
 
 
+# Function to obtain to current LTC to GBP trade value on CHANGENOW's platform
 def select_and_parse_gbp_value(wait):
     # Wait for the span element with the class name 'new-stepper-hints__rate' to be present
     span_element = wait.until(ec.presence_of_element_located((By.CLASS_NAME, 'new-stepper-hints__rate')))
@@ -107,6 +113,7 @@ def select_and_parse_gbp_value(wait):
             print("ERROR: No number found in the span text.")
 
 
+# Function to calculate the final price from all the scraped values
 def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance):
     gross_trade_price = one_ltc_to_gbp_value * xmr_to_ltc_rate
     if debug:
@@ -119,8 +126,8 @@ def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance
     with_fees_trade_price = rounded_trade_price + xmr_fees_total
     if debug:
         print(f"DEBUG: With fees trade price: £{with_fees_trade_price}")
-    # Remove current XMR balance
-    final_trade_price = with_fees_trade_price - current_balance
+    # Remove current XMR balance (applies rounding again to avoid unknown float bug)
+    final_trade_price = round(with_fees_trade_price - current_balance, 2)
     if debug:
         print(f"DEBUG: Final trade price: £{final_trade_price}")
     return final_trade_price
@@ -152,6 +159,7 @@ def update_balance(new_balance, settings):
     save_settings(settings)
 
 
+# Function to allow the user to alter their balance in the settings file
 def check_for_balance_update():
     # Load the current settings
     current_settings = load_settings()
@@ -159,10 +167,11 @@ def check_for_balance_update():
         # Update the balance
         new_balance = float(input("Enter new balance: £"))
         update_balance(new_balance, current_settings)
-        print(f"Balance updated to £{new_balance} .")
+        print(f"Balance updated to £{new_balance}")
     return current_settings['balance']
 
 
+# Main program function
 def main():
     if "--version" in sys.argv:
         print(__version__)
