@@ -12,22 +12,24 @@ import time
 import re
 import sys
 
-__version__ = "1.1.1"
+__version__ = "2.0.0"
 
 settings_file = 'settings.json'
 
 # Variables setup
 item_purchase_price = 109  # Wanted item's purchase price
-debug = True  # Enable for debug messages
+debug = False  # Enable for debug messages
+run_headless = True  # Disable to see the browser
 xmr_fees_total = 0.5  # Change when needed
 cookies_element_id = "L2AGLb"  # Change when needed
 
 
 # Function to create the webdriver instance with necessary settings and wait conditions
-def setup_web_driver():
+def setup_web_driver(headless):
     # Set up Firefox options
     options = FirefoxOptions()
-    options.add_argument("--headless")  # Enable headless mode explicitly
+    if headless:
+        options.add_argument("--headless")  # Enable headless mode explicitly
 
     # Automatically downloads and sets up the latest GeckoDriver
     service = FirefoxService(GeckoDriverManager().install())
@@ -137,13 +139,31 @@ def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance
 def load_settings():
     if not os.path.exists(settings_file):
         # If the file doesn't exist, create it with default settings
-        save_settings({"balance": 0.0})
-        if debug:
-            print(f"DEBUG: File not found. Created new default settings file.")
+        save_settings({"balance": 0.0, "debugging": False})
+        print(f"File not found. Created new default settings file.")
     with open(settings_file, 'r') as f:
         settings = json.load(f)
-        if debug:
-            print(f"DEBUG: Successfully loaded settings file.")
+        print(f"Successfully loaded settings file.")
+    if 'balance' not in settings:
+        settings['balance'] = False
+        save_settings(settings)
+        print("Added 'balance' setting to the file.")
+    if 'debugging' not in settings:
+        settings['debugging'] = False
+        save_settings(settings)
+        print("Added 'debugging' setting to the file.")
+    if 'item_price' not in settings:
+        settings['item_price'] = 0
+        save_settings(settings)
+        print("Added 'item_price' setting to the file.")
+    if 'run_headless' not in settings:
+        settings['run_headless'] = True
+        save_settings(settings)
+        print("Added 'run_headless' setting to the file.")
+    if 'xmr_fees' not in settings:
+        settings['xmr_fees'] = 0.5
+        save_settings(settings)
+        print("Added 'xmr_fees' setting to the file.")
     return settings
 
 
@@ -159,31 +179,133 @@ def update_balance(new_balance, settings):
     save_settings(settings)
 
 
+# Function to update the debugging value in settings
+def update_debugging(new_debugging, settings):
+    settings['debugging'] = new_debugging
+    save_settings(settings)
+
+
+# Function to update the item price in settings
+def update_item_price(new_item_price, settings):
+    settings['item_price'] = new_item_price
+    save_settings(settings)
+
+
+# Function to update the headless mode value in settings
+def update_headless_mode(new_headless_option, settings):
+    settings['run_headless'] = new_headless_option
+    save_settings(settings)
+
+
+# Function to update the xmr_fees in settings
+def update_xmr_fees(new_xmr_fees, settings):
+    settings['xmr_fees'] = new_xmr_fees
+    save_settings(settings)
+
+
 # Function to allow the user to alter their balance in the settings file
-def check_for_balance_update():
-    # Load the current settings
-    current_settings = load_settings()
+def check_for_balance_update(current_settings):
     if input(f"Change balance[£{current_settings['balance']}]? (y/n): ") == "y":
         # Update the balance
         new_balance = float(input("Enter new balance: £"))
         update_balance(new_balance, current_settings)
         print(f"Balance updated to £{new_balance}")
+        return new_balance
     return current_settings['balance']
+
+
+# Function to allow the user to alter the debugging value in the settings file
+def check_for_debugging_update(current_settings):
+    if input(f"Change debugging[Status: {current_settings['debugging']}]? (y/n): ") == "y":
+        # Update the debugging value
+        user_input = input("Do Debugging? (y/n): ")
+        if user_input == "y":
+            if not current_settings['debugging'] is True:
+                update_debugging(True, current_settings)
+                print(f"Debugging value updated to True")
+                return True
+        elif user_input == "n":
+            if not current_settings['debugging'] is False:
+                update_debugging(False, current_settings)
+                print(f"Debugging value updated to False")
+                return False
+        else:
+            print("ERROR: Invalid input.")
+    return current_settings['debugging']
+
+
+# Function to allow the user to alter the item purchase price in the settings file
+def check_for_item_price_update(current_settings):
+    if input(f"Change item price[£{current_settings['item_price']}]? (y/n): ") == "y":
+        # Update the balance
+        new_item_price = float(input("Enter new item price: £"))
+        update_item_price(new_item_price, current_settings)
+        print(f"item Price updated to £{new_item_price}")
+        return new_item_price
+    return current_settings['balance']
+
+
+# Function to allow the user to run the program headless
+def check_for_headless_update(current_settings):
+    if input(f"Change headless option[Status: {current_settings['run_headless']}]? (y/n): ") == "y":
+        # Update the headless value
+        user_input = input("Run Headless? (y/n): ")
+        if user_input == "y":
+            if not current_settings['run_headless'] is True:
+                update_headless_mode(True, current_settings)
+                print(f"Headless value updated to True")
+                return True
+        elif user_input == "n":
+            if not current_settings['run_headless'] is False:
+                update_headless_mode(False, current_settings)
+                print(f"Headless value updated to False")
+                return False
+        else:
+            print("ERROR: Invalid input.")
+    return current_settings['run_headless']
+
+
+# Function to allow the user to alter the xmr fees in the settings file
+def check_for_xmr_fees_update(current_settings):
+    if input(f"Change xmr fees[£{current_settings['xmr_fees']}]? (y/n): ") == "y":
+        # Update the xmr fee price
+        new_xmr_fees = float(input("Enter new fee price: £"))
+        update_item_price(new_xmr_fees, current_settings)
+        print(f"XMR fees updated to £{new_xmr_fees}")
+        return new_xmr_fees
+    return current_settings['xmr_fees']
 
 
 # Main program function
 def main():
+    global debug
+    global item_purchase_price
+    global run_headless
+    global xmr_fees_total
     if "--version" in sys.argv:
-        print(__version__)
+        print(f"v{__version__}")
         return
-    print("Running application version", __version__)
+    print(f"Running application version v{__version__}")
     try:
-        # Create or load balance file
-        current_balance = check_for_balance_update()
+        # Create or load settings file
+        settings = load_settings()
+        # Store settings into correct variables
+        current_balance = settings['balance']
+        debug = settings['debugging']
+        item_purchase_price = settings['item_price']
+        run_headless = settings['run_headless']
+        xmr_fees_total = settings['xmr_fees']
+        # Ask user if they need to alter settings
+        if input("Do you want to change any settings? (y/n): ") == "y":
+            current_balance = check_for_balance_update(settings)
+            debug = check_for_debugging_update(settings)
+            item_purchase_price = check_for_item_price_update(settings)
+            run_headless = check_for_headless_update(settings)
+            xmr_fees_total = check_for_xmr_fees_update(settings)
         if debug:
             print("DEBUG: #### STARTED ####")
         # Create web driver and wait instances
-        driver, wait = setup_web_driver()
+        driver, wait = setup_web_driver(run_headless)
         # Search current XMR value of desired total
         load_site(driver, 0, False)
         # Accept cookies pop up
