@@ -1,0 +1,53 @@
+2024-09-16 22:11:03,307 - INFO - Successfully loaded settings file.
+on 0: 2024-09-16 22:11:04,957 - DEBUG - Main function now running.
+on 0: 2024-09-16 22:11:04,958 - INFO - ====== WebDriver manager ======
+on 0: 2024-09-16 22:11:06,351 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-16 22:11:06,354 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-16 22:11:06,586 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2703
+on 0: 2024-09-16 22:11:06,590 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-16 22:11:06,593 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-16 22:11:06,695 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2703
+on 0: 2024-09-16 22:11:06,699 - INFO - Driver [C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe] found in cache
+on 0: 2024-09-16 22:11:06,699 - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe
+on 0: 2024-09-16 22:11:06,707 - DEBUG - Started executable: `C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe` in a child process with pid: 11148 using 0 to output -3
+on 0: 2024-09-16 22:11:07,730 - DEBUG - POST http://localhost:60502/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 3}, 'args': ['--headless']}}}}
+on 0: 2024-09-16 22:11:07,731 - DEBUG - Starting new HTTP connection (1): localhost:60502
+on 0: 2024-09-16 22:11:11,492 - DEBUG - http://localhost:60502 "POST /session HTTP/11" 200 0
+on 0: 2024-09-16 22:11:11,492 - DEBUG - Remote response: status=200 | data={"value":{"sessionId":"a5fad4c8-7074-414a-b62d-18b0b8dc1e00","capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"130.0","moz:accessibilityChecks":false,"moz:buildID":"20240829075237","moz:debuggerAddress":"127.0.0.1:60503","moz:geckodriverVersion":"0.35.0","moz:headless":true,"moz:platformVersion":"10.0","moz:processID":11184,"moz:profile":"C:\\Users\\MDMAIN~1\\AppData\\Local\\Temp\\rust_mozprofilekArikH","moz:shutdownTimeout":60000,"moz:webdriverClick":true,"moz:windowless":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0"}}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '841', 'date': 'Mon, 16 Sep 2024 21:11:09 GMT'})
+on 0: 2024-09-16 22:11:11,493 - DEBUG - Finished Request
+on 0: 2024-09-16 22:11:11,493 - DEBUG - Webdriver instance created succesfully.
+on 1: 2024-09-16 22:11:11,494 - DEBUG - POST http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/url {'url': 'https://www.google.com/search?q=109.0gbp+to+xmr'}
+on 1: 2024-09-16 22:11:12,198 - DEBUG - http://localhost:60502 "POST /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/url HTTP/11" 200 0
+on 1: 2024-09-16 22:11:12,199 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 1: 2024-09-16 22:11:12,199 - DEBUG - Finished Request
+on 1: 2024-09-16 22:11:12,200 - DEBUG - Site index0: Loaded successfully.
+on 2: 2024-09-16 22:11:12,200 - DEBUG - POST http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/element {'using': 'css selector', 'value': '[id="L2AGLb"]'}
+on 2: 2024-09-16 22:11:12,217 - DEBUG - http://localhost:60502 "POST /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/element HTTP/11" 200 0
+on 2: 2024-09-16 22:11:12,217 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"5d341945-5573-429c-90a3-fee90d376d07"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 2: 2024-09-16 22:11:12,217 - DEBUG - Finished Request
+on 2: 2024-09-16 22:11:12,219 - DEBUG - POST http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': '5d341945-5573-429c-90a3-fee90d376d07'}]}
+on 2: 2024-09-16 22:11:12,235 - DEBUG - http://localhost:60502 "POST /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/execute/sync HTTP/11" 200 0
+on 2: 2024-09-16 22:11:12,235 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 2: 2024-09-16 22:11:12,235 - DEBUG - Finished Request
+on 2: 2024-09-16 22:11:12,235 - DEBUG - GET http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/element/5d341945-5573-429c-90a3-fee90d376d07/enabled {}
+on 2: 2024-09-16 22:11:12,241 - DEBUG - http://localhost:60502 "GET /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/element/5d341945-5573-429c-90a3-fee90d376d07/enabled HTTP/11" 200 0
+on 2: 2024-09-16 22:11:12,241 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 2: 2024-09-16 22:11:12,242 - DEBUG - Finished Request
+on 2: 2024-09-16 22:11:12,242 - DEBUG - POST http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/element/5d341945-5573-429c-90a3-fee90d376d07/click {}
+on 2: 2024-09-16 22:11:12,472 - DEBUG - http://localhost:60502 "POST /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/element/5d341945-5573-429c-90a3-fee90d376d07/click HTTP/11" 200 0
+on 2: 2024-09-16 22:11:12,473 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 2: 2024-09-16 22:11:12,473 - DEBUG - Finished Request
+on 2: 2024-09-16 22:11:12,473 - DEBUG - 'Accept' cookies button clicked successfully.
+on 3: 2024-09-16 22:11:12,474 - DEBUG - POST http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/elements {'using': 'css selector', 'value': 'input[aria-label="Currency Amount Field"]'}
+on 3: 2024-09-16 22:11:12,478 - DEBUG - http://localhost:60502 "POST /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/elements HTTP/11" 200 0
+on 3: 2024-09-16 22:11:12,478 - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"82f122dc-2dd6-4743-91b4-2d04ce08bda6"},{"element-6066-11e4-a52e-4f735466cecf":"01389393-fea0-4f0e-a444-15d10f891921"}]} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '169', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 3: 2024-09-16 22:11:12,478 - DEBUG - Finished Request
+on 3: 2024-09-16 22:11:12,479 - DEBUG - POST http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': '01389393-fea0-4f0e-a444-15d10f891921'}, 'value']}
+on 3: 2024-09-16 22:11:12,484 - DEBUG - http://localhost:60502 "POST /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/execute/sync HTTP/11" 200 0
+on 3: 2024-09-16 22:11:12,484 - DEBUG - Remote response: status=200 | data={"value":"0.84"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '16', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 3: 2024-09-16 22:11:12,485 - DEBUG - Finished Request
+on 3: 2024-09-16 22:11:12,485 - DEBUG - XMR trade price scraped successfully: 0.84XMR.
+on 4: 2024-09-16 22:11:12,485 - DEBUG - POST http://localhost:60502/session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/url {'url': 'https://changenow.io/?from=ltc&to=xmr&amountTo=0.84'}
+on 4: 2024-09-16 22:11:13,025 - DEBUG - http://localhost:60502 "POST /session/a5fad4c8-7074-414a-b62d-18b0b8dc1e00/url HTTP/11" 200 0
+on 4: 2024-09-16 22:11:13,026 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Mon, 16 Sep 2024 21:11:11 GMT'})
+on 4: 2024-09-16 22:11:13,026 - DEBUG - Finished Request

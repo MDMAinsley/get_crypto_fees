@@ -1,5 +1,3 @@
-import logging
-
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
@@ -13,9 +11,10 @@ import re
 import sys
 import json
 import os
+import logging
 
 
-__version__ = "2.1.0"
+__version__ = "2.1.1"
 
 settings_file = 'settings.json'
 
@@ -333,7 +332,7 @@ def main():
             run_headless = check_for_headless_update(settings)
             xmr_fees_total = check_for_xmr_fees_update(settings)
         # Create the progress bar
-        with alive_bar(len(tasks)) as bar:
+        with alive_bar(len(tasks), spinner='classic', bar='classic') as bar:
             current_task = 0
             bar.text = tasks[current_task]
 

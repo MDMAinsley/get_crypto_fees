@@ -1,6 +1,6 @@
 {
-    "balance": 0.21,
-    "debugging": false,
+    "balance": 0.0,
+    "debugging": true,
     "item_price": 109.0,
     "run_headless": true,
     "xmr_fees": 0.5
