@@ -14,7 +14,7 @@ import os
 import logging
 
 
-__version__ = "2.1.1"
+__version__ = "2.1.2"
 
 settings_file = 'settings.json'
 
@@ -262,7 +262,7 @@ def check_for_item_price_update(current_settings):
         print(f"item Price updated to £{new_item_price}")
         logging.info(f"item Price updated to £{new_item_price}")
         return new_item_price
-    return current_settings['balance']
+    return current_settings['item_price']
 
 
 # Function to allow the user to run the program headless
@@ -300,9 +300,20 @@ def check_for_xmr_fees_update(current_settings):
     return current_settings['xmr_fees']
 
 
-tasks = ["Creating webdriver instance.", "Searching XMR rate.", "Accepting Cookies.", "Storing XMR value."
-         , "Searching LTC to XMR rate.", "Storing XMR to LTC rate.", "Searching LTC to GBP rate."
-         , "Storing LTC to GBP rate.", "Calculating final trade price."]
+# Function to clear the console on any os
+def clear_console():
+    # For Windows
+    if os.name == 'nt':
+        os.system('cls')
+    # For Linux/macOS
+    else:
+        os.system('clear')
+
+
+# Tasks array for the progress bar
+tasks = ["Creating webdriver instance.", "Searching XMR rate.", "Accepting Cookies.", "Storing XMR value.",
+         "Searching LTC to XMR rate.", "Storing XMR to LTC rate.", "Searching LTC to GBP rate.",
+         "Storing LTC to GBP rate.", "Calculating final trade price."]
 
 
 # Main program function
@@ -325,12 +336,15 @@ def main():
         run_headless = settings['run_headless']
         xmr_fees_total = settings['xmr_fees']
         # Ask user if they need to alter settings
+        time.sleep(2)
+        clear_console()
         if input("Do you want to change any settings? (y/n): ") == "y":
             current_balance = check_for_balance_update(settings)
             debug = check_for_debugging_update(settings)
             item_purchase_price = check_for_item_price_update(settings)
             run_headless = check_for_headless_update(settings)
             xmr_fees_total = check_for_xmr_fees_update(settings)
+        print()
         # Create the progress bar
         with alive_bar(len(tasks), spinner='classic', bar='classic') as bar:
             current_task = 0
@@ -384,9 +398,13 @@ def main():
             # Close the driver instance
             driver.close()
         # Display the final estimate price
+        print()
+        print("------------------------------------------------------")
         print(f"Estimated trade price ~ £{final_estimate}")
+        print("------------------------------------------------------")
         logging.info(f"Estimated trade price ~ £{final_estimate}")
         # Make user confirm closing
+        print()
         input("Press Enter to exit...")
     except Exception as e:
         print(f"An error occurred: {e}")
