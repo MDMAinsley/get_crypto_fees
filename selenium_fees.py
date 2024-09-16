@@ -1,5 +1,4 @@
-import json
-import os
+import logging
 
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
@@ -8,11 +7,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from webdriver_manager.firefox import GeckoDriverManager
+from alive_progress import alive_bar
 import time
 import re
 import sys
+import json
+import os
 
-__version__ = "2.0.1"
+
+__version__ = "2.1.0"
 
 settings_file = 'settings.json'
 
@@ -22,6 +25,12 @@ debug = False  # Enable for debug messages
 run_headless = True  # Disable to see the browser
 xmr_fees_total = 0.5  # Change when needed
 cookies_element_id = "L2AGLb"  # Change when needed
+
+# Create and configure logger
+logging.basicConfig(filename="GetFees.log",
+                    format='%(asctime)s - %(levelname)s - %(message)s',
+                    filemode='w',
+                    level=logging.DEBUG)
 
 
 # Function to create the webdriver instance with necessary settings and wait conditions
@@ -38,7 +47,7 @@ def setup_web_driver(headless):
     # Create a WebDriverWait instance with a 10-second timeout
     wait = WebDriverWait(driver, 10)
     if debug:
-        print("DEBUG: Web driver created successfully.")
+        logging.debug("Webdriver instance created succesfully.")
     return driver, wait
 
 
@@ -53,7 +62,7 @@ def load_site(driver, index, xmr_trade_value):
         driver.get(f'https://changenow.io/?from=gbp&to=ltc&fiatMode=true&amount={item_purchase_price}')
         time.sleep(3)
     if debug:
-        print(f"DEBUG: Site index{index}: Loaded successfully.")
+        logging.debug(f"Site index{index}: Loaded successfully.")
 
 
 # Function to accept Googles cookies pop-up
@@ -62,7 +71,7 @@ def accept_cookies(wait):
     cookies_button = wait.until(ec.element_to_be_clickable((By.ID, cookies_element_id)))
     cookies_button.click()
     if debug:
-        print("DEBUG: 'Accept' cookies button clicked successfully.")
+        logging.debug("'Accept' cookies button clicked successfully.")
 
 
 # Function to obtain the current GBP item price in XMR using Google's latest conversion rate
@@ -77,11 +86,11 @@ def select_and_parse_xmr_value(wait):
         scraped_value = second_input_element.get_attribute("value")
         xmr_trade_value = float(scraped_value)
         if debug:
-            print(f"DEBUG: XMR trade price scraped successfully: {xmr_trade_value}XMR.")
+            logging.debug(f"XMR trade price scraped successfully: {xmr_trade_value}XMR.")
         return xmr_trade_value
     else:
         if debug:
-            print("ERROR: Less than two elements found with the specified aria-label.")
+            logging.fatal("Less than two elements found with the specified aria-label.")
 
 
 # Function to obtain the current XMR item value in LTC on CHANGENOW's platform
@@ -92,7 +101,7 @@ def select_and_parse_ltc_value(wait):
     scraped_value = amount_field.get_attribute("value")
     xmr_to_ltc_value = float(scraped_value)
     if debug:
-        print(f"DEBUG: Successfully scraped CHANGENOW's XMR to LTC value: {xmr_to_ltc_value}")
+        logging.debug(f"Successfully scraped CHANGENOW's XMR to LTC value: {xmr_to_ltc_value}")
     return xmr_to_ltc_value
 
 
@@ -108,30 +117,30 @@ def select_and_parse_gbp_value(wait):
         scraped_number = match.group(1)
         one_ltc_in_gbp = float(scraped_number)
         if debug:
-            print(f"DEBUG: Successfully scraped CHANGENOW's 1LTC to GBP value: {one_ltc_in_gbp}")
+            logging.debug(f"Successfully scraped CHANGENOW's 1LTC to GBP value: {one_ltc_in_gbp}")
         return one_ltc_in_gbp
     else:
         if debug:
-            print("ERROR: No number found in the span text.")
+            logging.fatal("No number found in the span text.")
 
 
 # Function to calculate the final price from all the scraped values
 def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance):
     gross_trade_price = one_ltc_to_gbp_value * xmr_to_ltc_rate
     if debug:
-        print(f"DEBUG: Gross trade price: £{gross_trade_price}")
+        logging.debug(f"Gross trade price: £{gross_trade_price}")
     # Round to the nearest penny
     rounded_trade_price = round(gross_trade_price, 2)
     if debug:
-        print(f"DEBUG: Rounded trade price: £{rounded_trade_price}")
+        logging.debug(f"Rounded trade price: £{rounded_trade_price}")
     # Add static XMR trade fees (conservative fees estimate)
     with_fees_trade_price = rounded_trade_price + xmr_fees_total
     if debug:
-        print(f"DEBUG: With fees trade price: £{with_fees_trade_price}")
+        logging.debug(f"With fees trade price: £{with_fees_trade_price}")
     # Remove current XMR balance (applies rounding again to avoid unknown float bug)
     final_trade_price = round(with_fees_trade_price - current_balance, 2)
     if debug:
-        print(f"DEBUG: Final trade price: £{final_trade_price}")
+        logging.debug(f"Final trade price: £{final_trade_price}")
     return final_trade_price
 
 
@@ -141,29 +150,36 @@ def load_settings():
         # If the file doesn't exist, create it with default settings
         save_settings({"balance": 0.0, "debugging": False})
         print(f"File not found. Created new default settings file.")
+        logging.info(f"File not found. Created new default settings file.")
     with open(settings_file, 'r') as f:
         settings = json.load(f)
         print(f"Successfully loaded settings file.")
+        logging.info(f"Successfully loaded settings file.")
     if 'balance' not in settings:
         settings['balance'] = False
         save_settings(settings)
         print("Added 'balance' setting to the file.")
+        logging.info("Added 'balance' setting to the file.")
     if 'debugging' not in settings:
         settings['debugging'] = False
         save_settings(settings)
         print("Added 'debugging' setting to the file.")
+        logging.info("Added 'debugging' setting to the file.")
     if 'item_price' not in settings:
         settings['item_price'] = 0
         save_settings(settings)
         print("Added 'item_price' setting to the file.")
+        logging.info("Added 'item_price' setting to the file.")
     if 'run_headless' not in settings:
         settings['run_headless'] = True
         save_settings(settings)
         print("Added 'run_headless' setting to the file.")
+        logging.info("Added 'run_headless' setting to the file.")
     if 'xmr_fees' not in settings:
         settings['xmr_fees'] = 0.5
         save_settings(settings)
         print("Added 'xmr_fees' setting to the file.")
+        logging.info("Added 'xmr_fees' setting to the file.")
     return settings
 
 
@@ -210,6 +226,7 @@ def check_for_balance_update(current_settings):
         new_balance = float(input("Enter new balance: £"))
         update_balance(new_balance, current_settings)
         print(f"Balance updated to £{new_balance}")
+        logging.info(f"Balance updated to £{new_balance}")
         return new_balance
     return current_settings['balance']
 
@@ -223,14 +240,17 @@ def check_for_debugging_update(current_settings):
             if not current_settings['debugging'] is True:
                 update_debugging(True, current_settings)
                 print(f"Debugging value updated to True")
+                logging.info(f"Debugging value updated to True")
                 return True
         elif user_input == "n":
             if not current_settings['debugging'] is False:
                 update_debugging(False, current_settings)
                 print(f"Debugging value updated to False")
+                logging.info(f"Debugging value updated to False")
                 return False
         else:
-            print("ERROR: Invalid input.")
+            print("Invalid input.")
+            logging.error("Invalid input.")
     return current_settings['debugging']
 
 
@@ -241,6 +261,7 @@ def check_for_item_price_update(current_settings):
         new_item_price = float(input("Enter new item price: £"))
         update_item_price(new_item_price, current_settings)
         print(f"item Price updated to £{new_item_price}")
+        logging.info(f"item Price updated to £{new_item_price}")
         return new_item_price
     return current_settings['balance']
 
@@ -254,14 +275,17 @@ def check_for_headless_update(current_settings):
             if not current_settings['run_headless'] is True:
                 update_headless_mode(True, current_settings)
                 print(f"Headless value updated to True")
+                logging.info(f"Headless value updated to True")
                 return True
         elif user_input == "n":
             if not current_settings['run_headless'] is False:
                 update_headless_mode(False, current_settings)
                 print(f"Headless value updated to False")
+                logging.info(f"Headless value updated to False")
                 return False
         else:
-            print("ERROR: Invalid input.")
+            print("Invalid input.")
+            logging.error("Invalid input.")
     return current_settings['run_headless']
 
 
@@ -272,8 +296,14 @@ def check_for_xmr_fees_update(current_settings):
         new_xmr_fees = float(input("Enter new fee price: £"))
         update_item_price(new_xmr_fees, current_settings)
         print(f"XMR fees updated to £{new_xmr_fees}")
+        logging.info(f"XMR fees updated to £{new_xmr_fees}")
         return new_xmr_fees
     return current_settings['xmr_fees']
+
+
+tasks = ["Creating webdriver instance.", "Searching XMR rate.", "Accepting Cookies.", "Storing XMR value."
+         , "Searching LTC to XMR rate.", "Storing XMR to LTC rate.", "Searching LTC to GBP rate."
+         , "Storing LTC to GBP rate.", "Calculating final trade price."]
 
 
 # Main program function
@@ -302,30 +332,61 @@ def main():
             item_purchase_price = check_for_item_price_update(settings)
             run_headless = check_for_headless_update(settings)
             xmr_fees_total = check_for_xmr_fees_update(settings)
-        if debug:
-            print("DEBUG: #### STARTED ####")
-        # Create web driver and wait instances
-        driver, wait = setup_web_driver(run_headless)
-        # Search current XMR value of desired total
-        load_site(driver, 0, False)
-        # Accept cookies pop up
-        accept_cookies(wait)
-        # Store the current trade price in XMR value
-        xmr_trade_value = select_and_parse_xmr_value(wait)
-        # Search LTC value of XMR trade price
-        load_site(driver, 1, xmr_trade_value)
-        # Store the current LTC total conversion rate
-        xmr_to_ltc_rate = select_and_parse_ltc_value(wait)
-        # Get CHANGENOW's LTC/GBP conversion price
-        load_site(driver, 2, False)
-        # Store CHANGENOW's current LTC to GBP trade price
-        one_ltc_to_gbp_value = select_and_parse_gbp_value(wait)
-        # Calculate final estimated price with fees
-        final_estimate = calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance)
-        # Close the driver instance
-        driver.close()
+        # Create the progress bar
+        with alive_bar(len(tasks)) as bar:
+            current_task = 0
+            bar.text = tasks[current_task]
+
+            if debug:
+                logging.debug("Main function now running.")
+            # Create web driver and wait instances
+            driver, wait = setup_web_driver(run_headless)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Search current XMR value of desired total
+            load_site(driver, 0, False)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Accept cookies pop up
+            accept_cookies(wait)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Store the current trade price in XMR value
+            xmr_trade_value = select_and_parse_xmr_value(wait)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Search LTC value of XMR trade price
+            load_site(driver, 1, xmr_trade_value)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Store the current LTC total conversion rate
+            xmr_to_ltc_rate = select_and_parse_ltc_value(wait)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Get CHANGENOW's LTC/GBP conversion price
+            load_site(driver, 2, False)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Store CHANGENOW's current LTC to GBP trade price
+            one_ltc_to_gbp_value = select_and_parse_gbp_value(wait)
+            current_task += 1
+            bar()
+            bar.text = tasks[current_task]
+            # Calculate final estimated price with fees
+            final_estimate = calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance)
+            bar()
+            # Close the driver instance
+            driver.close()
         # Display the final estimate price
         print(f"Estimated trade price ~ £{final_estimate}")
+        logging.info(f"Estimated trade price ~ £{final_estimate}")
         # Make user confirm closing
         input("Press Enter to exit...")
     except Exception as e:

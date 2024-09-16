@@ -1,15 +1,15 @@
 # -*- mode: python ; coding: utf-8 -*-
+from PyInstaller.utils.hooks import collect_data_files
 
+# Collect data files from grapheme
+grapheme_data = collect_data_files('grapheme')
 
 a = Analysis(
     ['selenium_fees.py'],
     pathex=[],
     binaries=[],
-    datas=[],	
-    hiddenimports=[
-		'selenium',  # Add hidden imports if necessary
-        'webdriver_manager',
-	],
+    datas=grapheme_data,
+    hiddenimports=['selenium', 'webdriver_manager', 'alive_progress', 'grapheme'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -24,7 +24,7 @@ exe = EXE(
     a.scripts,
     a.binaries,
     a.datas,
-    [],	
+    [],
     name='GF_Data',
     debug=False,
     bootloader_ignore_signals=False,
