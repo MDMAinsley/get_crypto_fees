@@ -25,7 +25,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],	
-    name='Get_Fees',
+    name='GF_Data',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
