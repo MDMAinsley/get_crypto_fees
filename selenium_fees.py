@@ -14,7 +14,7 @@ import os
 import logging
 
 
-__version__ = "2.1.2"
+__version__ = "2.1.3"
 
 settings_file = 'settings.json'
 
@@ -105,22 +105,33 @@ def select_and_parse_ltc_value(wait):
 
 
 # Function to obtain to current LTC to GBP trade value on CHANGENOW's platform
-def select_and_parse_gbp_value(wait):
-    # Wait for the span element with the class name 'new-stepper-hints__rate' to be present
-    span_element = wait.until(ec.presence_of_element_located((By.CLASS_NAME, 'new-stepper-hints__rate')))
-    # Extract the text from the span element
-    span_text = span_element.text
-    # Use regular expression to extract the number after '=' and before 'GBP'
-    match = re.search(r'~\s*(\d+\.?\d*)\s*GBP', span_text)
-    if match:
-        scraped_number = match.group(1)
-        one_ltc_in_gbp = float(scraped_number)
-        if debug:
-            logging.debug(f"Successfully scraped CHANGENOW's 1LTC to GBP value: {one_ltc_in_gbp}")
-        return one_ltc_in_gbp
-    else:
-        if debug:
-            logging.fatal("No number found in the span text.")
+def select_and_parse_gbp_value(wait, retries=5):
+    for attempt in range(retries):
+        try:
+            # Wait for the span element with the class name 'new-stepper-hints__rate' to be present
+            span_element = wait.until(ec.presence_of_element_located((By.CLASS_NAME, 'new-stepper-hints__rate')))
+            # Extract the text from the span element
+            span_text = span_element.text
+            # Use regular expression to extract the number after '=' and before 'GBP'
+            match = re.search(r'[=~]\s*(\d+\.?\d*)\s*GBP', span_text)
+            if match:
+                scraped_number = match.group(1)
+                one_ltc_in_gbp = float(scraped_number)
+                if debug:
+                    logging.debug(f"Successfully scraped CHANGENOW's 1LTC to GBP value: {one_ltc_in_gbp}")
+                return one_ltc_in_gbp
+            else:
+                logging.error(
+                    f"No number found in the span text. Attempt {attempt + 1} of {retries}. Text: {span_text}")
+        except ValueError as e:
+            logging.error(f"Error converting scraped number to float on attempt {attempt + 1} of {retries}. Error: {e}")
+
+        # Wait briefly before retrying to avoid overwhelming the server or repeating the same error too quickly
+        time.sleep(1)
+
+    # After retries are exhausted, log and raise an exception
+    logging.fatal(f"Failed to scrape LTC to GBP value after {retries} attempts.")
+    raise Exception(f"Failed to retrieve LTC to GBP value after {retries} attempts.")
 
 
 # Function to calculate the final price from all the scraped values
@@ -344,7 +355,7 @@ def main():
             item_purchase_price = check_for_item_price_update(settings)
             run_headless = check_for_headless_update(settings)
             xmr_fees_total = check_for_xmr_fees_update(settings)
-        print()
+        clear_console()
         # Create the progress bar
         with alive_bar(len(tasks), spinner='classic', bar='classic') as bar:
             current_task = 0

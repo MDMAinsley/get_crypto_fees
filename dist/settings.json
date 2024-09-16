@@ -1,7 +1,7 @@
 {
-    "balance": 0.1,
+    "balance": 0.0,
     "debugging": true,
-    "item_price": 109.0,
+    "item_price": 110.0,
     "run_headless": true,
     "xmr_fees": 0.5
 }
