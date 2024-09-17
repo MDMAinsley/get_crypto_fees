@@ -15,7 +15,7 @@ import os
 import logging
 
 
-__version__ = "2.2.11"
+__version__ = "2.2.2"
 
 settings_file = 'settings.json'
 
@@ -479,7 +479,9 @@ def main():
         logging.info(f"Estimated trade price ~ £{final_estimate}")
         # Make user confirm closing
         print()
-        save_estimate(final_estimate, item_purchase_price)
+        # Add the current balance back to the estimate for more accurate estimated best time and price
+        estimate_to_save = final_estimate + current_balance
+        save_estimate(estimate_to_save, item_purchase_price)
         print()
         input("Press Enter to exit...")
     except Exception as e:
