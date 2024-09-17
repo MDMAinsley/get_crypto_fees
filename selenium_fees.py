@@ -15,7 +15,7 @@ import os
 import logging
 
 
-__version__ = "2.2.1"
+__version__ = "2.2.11"
 
 settings_file = 'settings.json'
 
@@ -147,7 +147,7 @@ def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance
 def load_settings():
     if not os.path.exists(settings_file):
         # If the file doesn't exist, create it with default settings
-        save_settings({"balance": 0.0, "debugging": False})
+        save_settings({"balance": 0.0, "item_price": 0.0, "run_headless": True, "xmr_fees": 0.5})
         print(f"File not found. Created new default settings file.")
         logging.info(f"File not found. Created new default settings file.")
     with open(settings_file, 'r') as f:
@@ -160,7 +160,7 @@ def load_settings():
         print("Added 'balance' setting to the file.")
         logging.info("Added 'balance' setting to the file.")
     if 'item_price' not in settings:
-        settings['item_price'] = 0
+        settings['item_price'] = 0.0
         save_settings(settings)
         print("Added 'item_price' setting to the file.")
         logging.info("Added 'item_price' setting to the file.")

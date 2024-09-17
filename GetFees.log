@@ -1,14 +1,5 @@
-2024-09-17 17:01:08,155 - INFO - Successfully loaded settings file.
-2024-09-17 17:01:15,317 - INFO - Data found within 5 units of the initial product price.
-2024-09-17 17:01:15,321 - INFO - Best time to buy based on similar product prices is around 16:45 with an average price of £117.54
-on 0: 2024-09-17 17:02:07,016 - DEBUG - Main function now running.
-on 0: 2024-09-17 17:02:07,017 - INFO - ====== WebDriver manager ======
-on 0: 2024-09-17 17:02:08,252 - INFO - Get LATEST geckodriver version for 130.0 firefox
-on 0: 2024-09-17 17:02:08,257 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
-on 0: 2024-09-17 17:02:08,539 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 None
-on 0: 2024-09-17 17:02:08,543 - INFO - Get LATEST geckodriver version for 130.0 firefox
-on 0: 2024-09-17 17:02:08,548 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
-on 0: 2024-09-17 17:02:08,635 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2712
-on 0: 2024-09-17 17:02:08,639 - INFO - Driver [C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe] found in cache
-on 0: 2024-09-17 17:02:08,641 - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe
-on 0: 2024-09-17 17:02:08,652 - DEBUG - Started executable: `C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe` in a child process with pid: 16988 using 0 to output -3
+2024-09-17 17:08:12,034 - INFO - File not found. Created new default settings file.
+2024-09-17 17:08:12,045 - INFO - Successfully loaded settings file.
+2024-09-17 17:08:12,049 - INFO - Added 'item_price' setting to the file.
+2024-09-17 17:08:12,050 - INFO - Added 'run_headless' setting to the file.
+2024-09-17 17:08:12,051 - INFO - Added 'xmr_fees' setting to the file.
