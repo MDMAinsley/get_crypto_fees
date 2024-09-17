@@ -1,3 +1,4 @@
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
@@ -20,7 +21,6 @@ settings_file = 'settings.json'
 
 # Variables setup
 item_purchase_price = 109  # Wanted item's purchase price
-debug = False  # Enable for debug messages
 run_headless = True  # Disable to see the browser
 xmr_fees_total = 0.5  # Change when needed
 cookies_element_id = "L2AGLb"  # Change when needed
@@ -45,8 +45,7 @@ def setup_web_driver(headless):
 
     # Create a WebDriverWait instance with a 10-second timeout
     wait = WebDriverWait(driver, 10)
-    if debug:
-        logging.debug("Webdriver instance created succesfully.")
+    logging.debug("Webdriver instance created succesfully.")
     return driver, wait
 
 
@@ -60,8 +59,7 @@ def load_site(driver, index, xmr_trade_value):
     elif index == 2:
         driver.get(f'https://changenow.io/?from=gbp&to=ltc&fiatMode=true&amount={item_purchase_price}')
         time.sleep(3)
-    if debug:
-        logging.debug(f"Site index{index}: Loaded successfully.")
+    logging.debug(f"Site index{index}: Loaded successfully.")
 
 
 # Function to accept Googles cookies pop-up
@@ -69,8 +67,7 @@ def accept_cookies(wait):
     # Wait for the accept cookies button element to be present and clickable
     cookies_button = wait.until(ec.element_to_be_clickable((By.ID, cookies_element_id)))
     cookies_button.click()
-    if debug:
-        logging.debug("'Accept' cookies button clicked successfully.")
+    logging.debug("'Accept' cookies button clicked successfully.")
 
 
 # Function to obtain the current GBP item price in XMR using Google's latest conversion rate
@@ -84,12 +81,10 @@ def select_and_parse_xmr_value(wait):
         # Extract the value attribute
         scraped_value = second_input_element.get_attribute("value")
         xmr_trade_value = float(scraped_value)
-        if debug:
-            logging.debug(f"XMR trade price scraped successfully: {xmr_trade_value}XMR.")
+        logging.debug(f"XMR trade price scraped successfully: {xmr_trade_value}XMR.")
         return xmr_trade_value
     else:
-        if debug:
-            logging.fatal("Less than two elements found with the specified aria-label.")
+        logging.fatal("Less than two elements found with the specified aria-label.")
 
 
 # Function to obtain the current XMR item value in LTC on CHANGENOW's platform
@@ -99,8 +94,7 @@ def select_and_parse_ltc_value(wait):
     # Extract the value attribute
     scraped_value = amount_field.get_attribute("value")
     xmr_to_ltc_value = float(scraped_value)
-    if debug:
-        logging.debug(f"Successfully scraped CHANGENOW's XMR to LTC value: {xmr_to_ltc_value}")
+    logging.debug(f"Successfully scraped CHANGENOW's XMR to LTC value: {xmr_to_ltc_value}")
     return xmr_to_ltc_value
 
 
@@ -117,8 +111,7 @@ def select_and_parse_gbp_value(wait, retries=5):
             if match:
                 scraped_number = match.group(1)
                 one_ltc_in_gbp = float(scraped_number)
-                if debug:
-                    logging.debug(f"Successfully scraped CHANGENOW's 1LTC to GBP value: {one_ltc_in_gbp}")
+                logging.debug(f"Successfully scraped CHANGENOW's 1LTC to GBP value: {one_ltc_in_gbp}")
                 return one_ltc_in_gbp
             else:
                 logging.error(
@@ -137,20 +130,16 @@ def select_and_parse_gbp_value(wait, retries=5):
 # Function to calculate the final price from all the scraped values
 def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance):
     gross_trade_price = one_ltc_to_gbp_value * xmr_to_ltc_rate
-    if debug:
-        logging.debug(f"Gross trade price: £{gross_trade_price}")
+    logging.debug(f"Gross trade price: £{gross_trade_price}")
     # Round to the nearest penny
     rounded_trade_price = round(gross_trade_price, 2)
-    if debug:
-        logging.debug(f"Rounded trade price: £{rounded_trade_price}")
+    logging.debug(f"Rounded trade price: £{rounded_trade_price}")
     # Add static XMR trade fees (conservative fees estimate)
     with_fees_trade_price = rounded_trade_price + xmr_fees_total
-    if debug:
-        logging.debug(f"With fees trade price: £{with_fees_trade_price}")
+    logging.debug(f"With fees trade price: £{with_fees_trade_price}")
     # Remove current XMR balance (applies rounding again to avoid unknown float bug)
     final_trade_price = round(with_fees_trade_price - current_balance, 2)
-    if debug:
-        logging.debug(f"Final trade price: £{final_trade_price}")
+    logging.debug(f"Final trade price: £{final_trade_price}")
     return final_trade_price
 
 
@@ -170,11 +159,6 @@ def load_settings():
         save_settings(settings)
         print("Added 'balance' setting to the file.")
         logging.info("Added 'balance' setting to the file.")
-    if 'debugging' not in settings:
-        settings['debugging'] = False
-        save_settings(settings)
-        print("Added 'debugging' setting to the file.")
-        logging.info("Added 'debugging' setting to the file.")
     if 'item_price' not in settings:
         settings['item_price'] = 0
         save_settings(settings)
@@ -202,12 +186,6 @@ def save_settings(settings):
 # Function to update the balance value in settings
 def update_balance(new_balance, settings):
     settings['balance'] = new_balance
-    save_settings(settings)
-
-
-# Function to update the debugging value in settings
-def update_debugging(new_debugging, settings):
-    settings['debugging'] = new_debugging
     save_settings(settings)
 
 
@@ -239,29 +217,6 @@ def check_for_balance_update(current_settings):
         logging.info(f"Balance updated to £{new_balance}")
         return new_balance
     return current_settings['balance']
-
-
-# Function to allow the user to alter the debugging value in the settings file
-def check_for_debugging_update(current_settings):
-    if input(f"Change debugging[Status: {current_settings['debugging']}]? (y/n): ") == "y":
-        # Update the debugging value
-        user_input = input("Do Debugging? (y/n): ")
-        if user_input == "y":
-            if not current_settings['debugging'] is True:
-                update_debugging(True, current_settings)
-                print(f"Debugging value updated to True")
-                logging.info(f"Debugging value updated to True")
-                return True
-        elif user_input == "n":
-            if not current_settings['debugging'] is False:
-                update_debugging(False, current_settings)
-                print(f"Debugging value updated to False")
-                logging.info(f"Debugging value updated to False")
-                return False
-        else:
-            print("Invalid input.")
-            logging.error("Invalid input.")
-    return current_settings['debugging']
 
 
 # Function to allow the user to alter the item purchase price in the settings file
@@ -321,6 +276,115 @@ def clear_console():
         os.system('clear')
 
 
+# Function to save the estimated price and other relevant data to a JSON file
+def save_estimate(final_estimate, initial_product_price, filename='price_data.json'):
+    # Get the current date and time
+    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    # Create a dictionary to hold the data
+    data_entry = {
+        'date_time': current_time,
+        'final_estimate': final_estimate,
+        'initial_product_price': initial_product_price
+    }
+
+    try:
+        # Try to read existing data from the file
+        with open(filename, 'r') as file:
+            data = json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        # If file doesn't exist or is empty, initialize data as an empty list
+        data = []
+
+    # Append the new data entry
+    data.append(data_entry)
+
+    # Write the updated data back to the file
+    with open(filename, 'w') as file:
+        json.dump(data, file, indent=4)
+
+    print(f"Estimate saved.")
+    logging.info(f"Estimate saved: {data_entry}")
+
+
+# Function to read price data JSON and provided an estimated best time and price
+def analyse_best_time(initial_product_price, tolerance=5, tolerance_increment=10, max_retries=10,
+                      filename='price_data.json'):
+    try:
+        # Read the data from the file
+        with open(filename, 'r') as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        print(f"No data found in {filename}")
+        logging.error(f"No data found in {filename}")
+        return
+    except json.JSONDecodeError:
+        print(f"Error reading data from {filename}")
+        logging.error(f"Error reading data from {filename}")
+        return
+
+    # Dictionary to store sums and counts of prices per quarter-hour for matching initial prices
+    quarter_hourly_data = {}
+
+    # Function to check if a price is within a certain tolerance
+    def is_within_tolerance(value1, value2, tolerance):
+        return abs(value1 - value2) <= tolerance
+
+    # Helper function to round time to the nearest quarter-hour
+    def round_to_nearest_quarter_hour(date_time):
+        minutes = (date_time.minute // 15) * 15
+        return date_time.replace(minute=minutes, second=0, microsecond=0)
+
+    # Start with the initial tolerance
+    current_tolerance = tolerance
+
+    # Try to filter data and widen the tolerance up to max_retries
+    for attempt in range(max_retries):
+        # Filter data for entries with similar initial product prices within current tolerance
+        filtered_data = [entry for entry in data if
+                         is_within_tolerance(entry['initial_product_price'], initial_product_price, current_tolerance)]
+
+        if filtered_data:
+            logging.info(f"Data found within {current_tolerance} units of the initial product price.")
+            break  # If data is found, break the loop
+        else:
+            logging.info(f"No data found within {current_tolerance} units of initial price. Increasing tolerance...")
+            current_tolerance += tolerance_increment  # Increase the tolerance
+    else:
+        # If we complete all retries and still no data is found, exit the function
+        logging.info(f"No sufficient data even after increasing the tolerance to {current_tolerance}.")
+        return
+
+    # Process the filtered data to calculate averages per quarter-hour
+    for entry in filtered_data:
+        # Parse the date and time from the entry
+        date_time = datetime.strptime(entry['date_time'], '%Y-%m-%d %H:%M:%S')
+
+        # Round the time to the nearest quarter-hour
+        rounded_time = round_to_nearest_quarter_hour(date_time)
+
+        # Get the final estimate
+        price = entry['final_estimate']
+
+        # Initialize or update the sum and count for the quarter-hour
+        if rounded_time not in quarter_hourly_data:
+            quarter_hourly_data[rounded_time] = {'sum': 0, 'count': 0}
+
+        quarter_hourly_data[rounded_time]['sum'] += price
+        quarter_hourly_data[rounded_time]['count'] += 1
+
+    # Calculate the average price per quarter-hour for the filtered data
+    quarter_hourly_averages = {time: quarter_hourly_data[time]['sum'] / quarter_hourly_data[time]['count']
+                               for time in quarter_hourly_data}
+
+    # Find the quarter-hour with the lowest average price
+    best_time = min(quarter_hourly_averages, key=quarter_hourly_averages.get)
+    best_price = quarter_hourly_averages[best_time]
+
+    print(f"Best time to buy based on similar product prices is around {best_time.strftime('%H:%M')} with an average price of £{best_price:.2f}")
+    logging.info(f"Best time to buy based on similar product prices is around {best_time.strftime('%H:%M')} with an average price of £{best_price:.2f}")
+
+
 # Tasks array for the progress bar
 tasks = ["Creating webdriver instance.", "Searching XMR rate.", "Accepting Cookies.", "Storing XMR value.",
          "Searching LTC to XMR rate.", "Storing XMR to LTC rate.", "Searching LTC to GBP rate.",
@@ -329,7 +393,6 @@ tasks = ["Creating webdriver instance.", "Searching XMR rate.", "Accepting Cooki
 
 # Main program function
 def main():
-    global debug
     global item_purchase_price
     global run_headless
     global xmr_fees_total
@@ -342,27 +405,27 @@ def main():
         settings = load_settings()
         # Store settings into correct variables
         current_balance = settings['balance']
-        debug = settings['debugging']
         item_purchase_price = settings['item_price']
         run_headless = settings['run_headless']
         xmr_fees_total = settings['xmr_fees']
-        # Ask user if they need to alter settings
         time.sleep(2)
         clear_console()
+        # Ask user if they need to alter settings
         if input("Do you want to change any settings? (y/n): ") == "y":
             current_balance = check_for_balance_update(settings)
-            debug = check_for_debugging_update(settings)
             item_purchase_price = check_for_item_price_update(settings)
             run_headless = check_for_headless_update(settings)
             xmr_fees_total = check_for_xmr_fees_update(settings)
+        clear_console()
+        # Display best time estimate
+        analyse_best_time(item_purchase_price)
+        input("Press Enter to continue...")
         clear_console()
         # Create the progress bar
         with alive_bar(len(tasks), spinner='classic', bar='classic') as bar:
             current_task = 0
             bar.text = tasks[current_task]
-
-            if debug:
-                logging.debug("Main function now running.")
+            logging.debug("Main function now running.")
             # Create web driver and wait instances
             driver, wait = setup_web_driver(run_headless)
             current_task += 1
@@ -415,6 +478,8 @@ def main():
         print("------------------------------------------------------")
         logging.info(f"Estimated trade price ~ £{final_estimate}")
         # Make user confirm closing
+        print()
+        save_estimate(final_estimate, item_purchase_price)
         print()
         input("Press Enter to exit...")
     except Exception as e:
