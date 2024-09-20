@@ -1,32 +1,98 @@
 [
     {
-        "date_time": "2024-09-17 17:20:41",
-        "final_estimate": 117.06,
-        "initial_product_price": 109.0
+        "date_time": "2024-09-17 16:33:44",
+        "final_estimate": 118.05,
+        "initial_product_price": 110.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
     },
     {
-        "date_time": "2024-09-17 17:22:21",
-        "final_estimate": 116.87,
-        "initial_product_price": 109.0
+        "date_time": "2024-09-17 16:55:00",
+        "final_estimate": 117.54,
+        "initial_product_price": 110.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
     },
     {
-        "date_time": "2024-09-17 17:22:57",
-        "final_estimate": 116.98,
-        "initial_product_price": 109.0
+        "date_time": "2024-09-20 00:17:37",
+        "final_estimate": 107.5,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
     },
     {
-        "date_time": "2024-09-17 18:06:28",
-        "final_estimate": 116.36,
-        "initial_product_price": 109.0
+        "date_time": "2024-09-20 01:17:24",
+        "final_estimate": 106.77,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
     },
     {
-        "date_time": "2024-09-17 18:25:58",
-        "final_estimate": 116.49,
-        "initial_product_price": 109.0
+        "date_time": "2024-09-20 01:22:31",
+        "final_estimate": 107.13,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
     },
     {
-        "date_time": "2024-09-17 20:53:25",
-        "final_estimate": 115.98,
-        "initial_product_price": 109.0
+        "date_time": "2024-09-20 01:36:10",
+        "final_estimate": 108.39,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 02:34:00",
+        "final_estimate": 107.67,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 02:36:14",
+        "final_estimate": 107.81,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "btc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 02:37:21",
+        "final_estimate": 107.84,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "btc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 03:01:51",
+        "final_estimate": 118.01,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 03:05:07",
+        "final_estimate": 118.03,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 03:44:27",
+        "final_estimate": 117.24,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
     }
 ]

@@ -3,5 +3,9 @@
     "debugging": true,
     "item_price": 109.0,
     "run_headless": true,
-    "xmr_fees": 0.5
+    "xmr_fees": 0.5,
+    "do_setup": false,
+    "fiat_currency": "gbp",
+    "initial_crypto": "ltc",
+    "final_crypto": "xmr"
 }

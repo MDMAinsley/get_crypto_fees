@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 settings_file = 'settings.json'
 
@@ -566,6 +566,15 @@ def sync_data(filename='price_data.json'):
         shared_data = download_shared_data()
 
         if shared_data is not None:
+            # Check if the required keys exist in local data
+            keys_to_check = ['fiat_currency', 'initial_crypto', 'final_crypto']
+            if local_data and any(key not in local_data[0] for key in keys_to_check):
+                logging.warning("Local data is missing required keys. Replacing with shared data.")
+                # Replace local data with shared data
+                with open(filename, 'w') as f:
+                    json.dump(shared_data, f, indent=4)
+                return  # Exit the function after replacing data
+
             # Check if shared data is the same as local data
             if shared_data == local_data:
                 logging.info("Local data is the same as shared data. No upload needed.")
