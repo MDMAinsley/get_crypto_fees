@@ -34,7 +34,7 @@ def main():
     app_exe_path = os.path.join(app_dir, "GF_Data.exe")
     current_version = get_current_version(app_exe_path)  # Get the current app version
     owner = "MDMAinsley"
-    repo = "feesnfees"
+    repo = "get_crypto_fees"
     latest_version_url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
     updater_path = os.path.join(app_dir, "GF_Updater.exe")
 

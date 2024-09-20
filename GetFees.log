@@ -1,5 +1,117 @@
-2024-09-17 17:08:12,034 - INFO - File not found. Created new default settings file.
-2024-09-17 17:08:12,045 - INFO - Successfully loaded settings file.
-2024-09-17 17:08:12,049 - INFO - Added 'item_price' setting to the file.
-2024-09-17 17:08:12,050 - INFO - Added 'run_headless' setting to the file.
-2024-09-17 17:08:12,051 - INFO - Added 'xmr_fees' setting to the file.
+2024-09-20 02:36:43,385 - INFO - Running application version v1.0.0
+2024-09-20 02:36:43,386 - INFO - Successfully loaded settings file.
+2024-09-20 02:36:57,007 - INFO - Headless value updated to False
+2024-09-20 02:37:02,034 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-20 02:37:02,165 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-20 02:37:02,168 - INFO - Attempting to download shared data from GitHub...
+2024-09-20 02:37:02,171 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-09-20 02:37:02,248 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/feesnfees/main/price_data.json HTTP/11" 200 213
+2024-09-20 02:37:02,249 - INFO - Received response from GitHub.
+2024-09-20 02:37:02,249 - INFO - Downloaded shared data from GitHub.
+2024-09-20 02:37:02,252 - INFO - Attempting to upload merged data to GitHub...
+2024-09-20 02:37:02,257 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-20 02:37:02,542 - DEBUG - https://api.github.com:443 "GET /repos/MDMAinsley/feesnfees/contents/price_data.json HTTP/11" 200 None
+2024-09-20 02:37:02,546 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-20 02:37:03,047 - DEBUG - https://api.github.com:443 "PUT /repos/MDMAinsley/feesnfees/contents/price_data.json HTTP/11" 200 None
+2024-09-20 02:37:03,047 - INFO - Uploaded local data to GitHub.
+2024-09-20 02:37:03,049 - INFO - Data found within 5 units of the initial product price.
+2024-09-20 02:37:03,052 - INFO - Best time to buy based on similar product prices is around 02:30 with an average price of £107.81
+on 0: 2024-09-20 02:37:04,684 - DEBUG - Main function now running.
+on 0: 2024-09-20 02:37:04,685 - INFO - ====== WebDriver manager ======
+on 0: 2024-09-20 02:37:06,206 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-20 02:37:06,208 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-20 02:37:06,414 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2706
+on 0: 2024-09-20 02:37:06,418 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-20 02:37:06,422 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-20 02:37:06,504 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2706
+on 0: 2024-09-20 02:37:06,508 - INFO - Driver [C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe] found in cache
+on 0: 2024-09-20 02:37:06,511 - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe
+on 0: 2024-09-20 02:37:06,520 - DEBUG - Started executable: `C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe` in a child process with pid: 17912 using 0 to output -3
+on 0: 2024-09-20 02:37:07,545 - DEBUG - POST http://localhost:55775/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 3}}}}}
+on 0: 2024-09-20 02:37:07,546 - DEBUG - Starting new HTTP connection (1): localhost:55775
+on 0: 2024-09-20 02:37:12,203 - DEBUG - http://localhost:55775 "POST /session HTTP/11" 200 0
+on 0: 2024-09-20 02:37:12,203 - DEBUG - Remote response: status=200 | data={"value":{"sessionId":"242df23b-5f9d-451e-9cf0-1de80bbbcddf","capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"130.0","moz:accessibilityChecks":false,"moz:buildID":"20240829075237","moz:debuggerAddress":"127.0.0.1:55776","moz:geckodriverVersion":"0.35.0","moz:headless":false,"moz:platformVersion":"10.0","moz:processID":17636,"moz:profile":"C:\\Users\\MDMAIN~1\\AppData\\Local\\Temp\\rust_mozprofile2ZgObv","moz:shutdownTimeout":60000,"moz:webdriverClick":true,"moz:windowless":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0"}}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '842', 'date': 'Fri, 20 Sep 2024 01:37:09 GMT'})
+on 0: 2024-09-20 02:37:12,204 - DEBUG - Finished Request
+on 0: 2024-09-20 02:37:12,208 - DEBUG - Webdriver instance created succesfully.
+on 1: 2024-09-20 02:37:12,208 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/url {'url': 'https://www.google.com/search?q=100.0gbp+to+xmr'}
+on 1: 2024-09-20 02:37:12,788 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/url HTTP/11" 200 0
+on 1: 2024-09-20 02:37:12,788 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 01:37:12 GMT'})
+on 1: 2024-09-20 02:37:12,788 - DEBUG - Finished Request
+on 1: 2024-09-20 02:37:12,788 - DEBUG - Site index0: Loaded successfully.
+on 2: 2024-09-20 02:37:12,789 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element {'using': 'css selector', 'value': '[id="L2AGLb"]'}
+on 2: 2024-09-20 02:37:12,826 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element HTTP/11" 200 0
+on 2: 2024-09-20 02:37:12,826 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"9f14b85e-4ee5-4d67-9186-b85c48da348a"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Fri, 20 Sep 2024 01:37:12 GMT'})
+on 2: 2024-09-20 02:37:12,826 - DEBUG - Finished Request
+on 2: 2024-09-20 02:37:12,829 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': '9f14b85e-4ee5-4d67-9186-b85c48da348a'}]}
+on 2: 2024-09-20 02:37:12,843 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/execute/sync HTTP/11" 200 0
+on 2: 2024-09-20 02:37:12,843 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 01:37:12 GMT'})
+on 2: 2024-09-20 02:37:12,844 - DEBUG - Finished Request
+on 2: 2024-09-20 02:37:12,845 - DEBUG - GET http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element/9f14b85e-4ee5-4d67-9186-b85c48da348a/enabled {}
+on 2: 2024-09-20 02:37:12,850 - DEBUG - http://localhost:55775 "GET /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element/9f14b85e-4ee5-4d67-9186-b85c48da348a/enabled HTTP/11" 200 0
+on 2: 2024-09-20 02:37:12,850 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 01:37:12 GMT'})
+on 2: 2024-09-20 02:37:12,850 - DEBUG - Finished Request
+on 2: 2024-09-20 02:37:12,851 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element/9f14b85e-4ee5-4d67-9186-b85c48da348a/click {}
+on 2: 2024-09-20 02:37:13,079 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element/9f14b85e-4ee5-4d67-9186-b85c48da348a/click HTTP/11" 200 0
+on 2: 2024-09-20 02:37:13,079 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 01:37:12 GMT'})
+on 2: 2024-09-20 02:37:13,079 - DEBUG - Finished Request
+on 2: 2024-09-20 02:37:13,080 - DEBUG - 'Accept' cookies button clicked successfully.
+on 3: 2024-09-20 02:37:13,080 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/elements {'using': 'css selector', 'value': 'input[aria-label="Currency Amount Field"]'}
+on 3: 2024-09-20 02:37:13,084 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/elements HTTP/11" 200 0
+on 3: 2024-09-20 02:37:13,085 - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"8f4e8a35-13c3-49d2-88d6-f2af052679c8"},{"element-6066-11e4-a52e-4f735466cecf":"89a67bda-24c8-4d18-8b96-1bf9586892ce"}]} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '169', 'date': 'Fri, 20 Sep 2024 01:37:12 GMT'})
+on 3: 2024-09-20 02:37:13,085 - DEBUG - Finished Request
+on 3: 2024-09-20 02:37:13,085 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': '89a67bda-24c8-4d18-8b96-1bf9586892ce'}, 'value']}
+on 3: 2024-09-20 02:37:13,237 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/execute/sync HTTP/11" 200 0
+on 3: 2024-09-20 02:37:13,237 - DEBUG - Remote response: status=200 | data={"value":"0.75"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '16', 'date': 'Fri, 20 Sep 2024 01:37:12 GMT'})
+on 3: 2024-09-20 02:37:13,237 - DEBUG - Finished Request
+on 3: 2024-09-20 02:37:13,238 - DEBUG - XMR trade price scraped successfully: 0.75XMR.
+on 4: 2024-09-20 02:37:13,239 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/url {'url': 'https://changenow.io/?from=btc&to=xmr&amountTo=0.75'}
+on 4: 2024-09-20 02:37:13,771 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/url HTTP/11" 200 0
+on 4: 2024-09-20 02:37:13,771 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 01:37:13 GMT'})
+on 4: 2024-09-20 02:37:13,771 - DEBUG - Finished Request
+on 4: 2024-09-20 02:37:16,785 - DEBUG - Site index1: Loaded successfully.
+on 5: 2024-09-20 02:37:16,785 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element {'using': 'css selector', 'value': '[id="amount-field"]'}
+on 5: 2024-09-20 02:37:16,808 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element HTTP/11" 200 0
+on 5: 2024-09-20 02:37:16,808 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"ac0e85fc-dd43-4b38-be9b-e552bde3cc20"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Fri, 20 Sep 2024 01:37:16 GMT'})
+on 5: 2024-09-20 02:37:16,809 - DEBUG - Finished Request
+on 5: 2024-09-20 02:37:16,809 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'ac0e85fc-dd43-4b38-be9b-e552bde3cc20'}, 'value']}
+on 5: 2024-09-20 02:37:16,819 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/execute/sync HTTP/11" 200 0
+on 5: 2024-09-20 02:37:16,819 - DEBUG - Remote response: status=200 | data={"value":"0.00217454"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '22', 'date': 'Fri, 20 Sep 2024 01:37:16 GMT'})
+on 5: 2024-09-20 02:37:16,819 - DEBUG - Finished Request
+on 5: 2024-09-20 02:37:16,819 - DEBUG - Successfully scraped CHANGENOW's XMR to LTC value: 0.00217454
+on 6: 2024-09-20 02:37:16,820 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/url {'url': 'https://changenow.io/?from=gbp&to=btc&fiatMode=true&amount=100.0'}
+on 6: 2024-09-20 02:37:17,169 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/url HTTP/11" 200 0
+on 6: 2024-09-20 02:37:17,169 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 01:37:16 GMT'})
+on 6: 2024-09-20 02:37:17,170 - DEBUG - Finished Request
+on 6: 2024-09-20 02:37:20,179 - DEBUG - Site index2: Loaded successfully.
+on 7: 2024-09-20 02:37:20,179 - DEBUG - POST http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element {'using': 'css selector', 'value': '.new-stepper-hints__rate'}
+on 7: 2024-09-20 02:37:20,183 - DEBUG - http://localhost:55775 "POST /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element HTTP/11" 200 0
+on 7: 2024-09-20 02:37:20,184 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"1c4bf723-d163-416c-bfc5-7865092a9c65"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Fri, 20 Sep 2024 01:37:20 GMT'})
+on 7: 2024-09-20 02:37:20,184 - DEBUG - Finished Request
+on 7: 2024-09-20 02:37:20,184 - DEBUG - GET http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element/1c4bf723-d163-416c-bfc5-7865092a9c65/text {}
+on 7: 2024-09-20 02:37:20,193 - DEBUG - http://localhost:55775 "GET /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/element/1c4bf723-d163-416c-bfc5-7865092a9c65/text HTTP/11" 200 0
+on 7: 2024-09-20 02:37:20,193 - DEBUG - Remote response: status=200 | data={"value":"1 BTC ~ 49363.7 GBP"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '31', 'date': 'Fri, 20 Sep 2024 01:37:20 GMT'})
+on 7: 2024-09-20 02:37:20,193 - DEBUG - Finished Request
+on 7: 2024-09-20 02:37:20,194 - DEBUG - Successfully scraped CHANGENOW's 1LTC to GBP value: 49363.7
+on 8: 2024-09-20 02:37:20,194 - DEBUG - Gross trade price: £107.34334019799999
+on 8: 2024-09-20 02:37:20,194 - DEBUG - Rounded trade price: £107.34
+on 8: 2024-09-20 02:37:20,194 - DEBUG - With fees trade price: £107.84
+on 8: 2024-09-20 02:37:20,194 - DEBUG - Final trade price: £107.84
+on 9: 2024-09-20 02:37:20,194 - DEBUG - DELETE http://localhost:55775/session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/window {}
+on 9: 2024-09-20 02:37:21,089 - DEBUG - http://localhost:55775 "DELETE /session/242df23b-5f9d-451e-9cf0-1de80bbbcddf/window HTTP/11" 200 0
+on 9: 2024-09-20 02:37:21,090 - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '12', 'date': 'Fri, 20 Sep 2024 01:37:20 GMT'})
+on 9: 2024-09-20 02:37:21,090 - DEBUG - Finished Request
+2024-09-20 02:37:21,373 - INFO - Estimated trade price ~ £107.84
+2024-09-20 02:37:21,377 - INFO - Estimated saved.
+2024-09-20 02:37:21,396 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-20 02:37:21,515 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-20 02:37:21,519 - INFO - Attempting to download shared data from GitHub...
+2024-09-20 02:37:21,522 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-09-20 02:37:21,591 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/feesnfees/main/price_data.json HTTP/11" 200 213
+2024-09-20 02:37:21,592 - INFO - Received response from GitHub.
+2024-09-20 02:37:21,592 - INFO - Downloaded shared data from GitHub.
+2024-09-20 02:37:21,594 - INFO - Attempting to upload merged data to GitHub...
+2024-09-20 02:37:21,597 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-20 02:37:21,827 - DEBUG - https://api.github.com:443 "GET /repos/MDMAinsley/feesnfees/contents/price_data.json HTTP/11" 200 None
+2024-09-20 02:37:21,833 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-20 02:37:22,387 - DEBUG - https://api.github.com:443 "PUT /repos/MDMAinsley/feesnfees/contents/price_data.json HTTP/11" 200 None
+2024-09-20 02:37:22,388 - INFO - Uploaded local data to GitHub.

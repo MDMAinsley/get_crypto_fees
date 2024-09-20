@@ -1,7 +1,11 @@
 {
     "balance": 0.0,
     "debugging": false,
-    "item_price": 0,
-    "run_headless": true,
-    "xmr_fees": 0.5
+    "item_price": 100.0,
+    "run_headless": false,
+    "xmr_fees": 0.5,
+    "do_setup": false,
+    "fiat_currency": "gbp",
+    "initial_crypto": "btc",
+    "final_crypto": "xmr"
 }

@@ -1,0 +1,32 @@
+[
+    {
+        "date_time": "2024-09-17 17:20:41",
+        "final_estimate": 117.06,
+        "initial_product_price": 109.0
+    },
+    {
+        "date_time": "2024-09-17 17:22:21",
+        "final_estimate": 116.87,
+        "initial_product_price": 109.0
+    },
+    {
+        "date_time": "2024-09-17 17:22:57",
+        "final_estimate": 116.98,
+        "initial_product_price": 109.0
+    },
+    {
+        "date_time": "2024-09-17 18:06:28",
+        "final_estimate": 116.36,
+        "initial_product_price": 109.0
+    },
+    {
+        "date_time": "2024-09-17 18:25:58",
+        "final_estimate": 116.49,
+        "initial_product_price": 109.0
+    },
+    {
+        "date_time": "2024-09-17 20:53:25",
+        "final_estimate": 115.98,
+        "initial_product_price": 109.0
+    }
+]

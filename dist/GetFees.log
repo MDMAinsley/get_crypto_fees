@@ -1,1 +1,89 @@
-2024-09-17 17:03:02,605 - INFO - Successfully loaded settings file.
+2024-09-17 20:52:42,031 - INFO - Successfully loaded settings file.
+2024-09-17 20:52:49,207 - INFO - Data found within 5 units of the initial product price.
+2024-09-17 20:52:49,210 - INFO - Best time to buy based on similar product prices is around 18:00 with an average price of £116.36
+on 0: 2024-09-17 20:53:06,722 - DEBUG - Main function now running.
+on 0: 2024-09-17 20:53:06,722 - INFO - ====== WebDriver manager ======
+on 0: 2024-09-17 20:53:09,783 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-17 20:53:09,786 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-17 20:53:10,010 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2704
+on 0: 2024-09-17 20:53:10,019 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-17 20:53:10,021 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-17 20:53:10,110 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2704
+on 0: 2024-09-17 20:53:10,112 - INFO - Driver [C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe] found in cache
+on 0: 2024-09-17 20:53:10,113 - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe
+on 0: 2024-09-17 20:53:10,126 - DEBUG - Started executable: `C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe` in a child process with pid: 9368 using 0 to output -3
+on 0: 2024-09-17 20:53:11,144 - DEBUG - POST http://localhost:52143/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 3}, 'args': ['--headless']}}}}
+on 0: 2024-09-17 20:53:11,145 - DEBUG - Starting new HTTP connection (1): localhost:52143
+on 0: 2024-09-17 20:53:15,550 - DEBUG - http://localhost:52143 "POST /session HTTP/11" 200 0
+on 0: 2024-09-17 20:53:15,551 - DEBUG - Remote response: status=200 | data={"value":{"sessionId":"9c07f7f6-2ebf-4dc4-87bb-fc695f960b70","capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"130.0","moz:accessibilityChecks":false,"moz:buildID":"20240829075237","moz:debuggerAddress":"127.0.0.1:52144","moz:geckodriverVersion":"0.35.0","moz:headless":true,"moz:platformVersion":"10.0","moz:processID":2840,"moz:profile":"C:\\Users\\MDMAIN~1\\AppData\\Local\\Temp\\rust_mozprofiledot1In","moz:shutdownTimeout":60000,"moz:webdriverClick":true,"moz:windowless":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0"}}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '840', 'date': 'Tue, 17 Sep 2024 19:53:13 GMT'})
+on 0: 2024-09-17 20:53:15,551 - DEBUG - Finished Request
+on 0: 2024-09-17 20:53:15,551 - DEBUG - Webdriver instance created succesfully.
+on 1: 2024-09-17 20:53:15,552 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/url {'url': 'https://www.google.com/search?q=109.0gbp+to+xmr'}
+on 1: 2024-09-17 20:53:16,484 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/url HTTP/11" 200 0
+on 1: 2024-09-17 20:53:16,484 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Tue, 17 Sep 2024 19:53:15 GMT'})
+on 1: 2024-09-17 20:53:16,484 - DEBUG - Finished Request
+on 1: 2024-09-17 20:53:16,485 - DEBUG - Site index0: Loaded successfully.
+on 2: 2024-09-17 20:53:16,485 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element {'using': 'css selector', 'value': '[id="L2AGLb"]'}
+on 2: 2024-09-17 20:53:16,501 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element HTTP/11" 200 0
+on 2: 2024-09-17 20:53:16,501 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"d286b940-b814-403b-b334-c96b1422ad27"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Tue, 17 Sep 2024 19:53:15 GMT'})
+on 2: 2024-09-17 20:53:16,501 - DEBUG - Finished Request
+on 2: 2024-09-17 20:53:16,502 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'd286b940-b814-403b-b334-c96b1422ad27'}]}
+on 2: 2024-09-17 20:53:16,517 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/execute/sync HTTP/11" 200 0
+on 2: 2024-09-17 20:53:16,517 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Tue, 17 Sep 2024 19:53:15 GMT'})
+on 2: 2024-09-17 20:53:16,518 - DEBUG - Finished Request
+on 2: 2024-09-17 20:53:16,518 - DEBUG - GET http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element/d286b940-b814-403b-b334-c96b1422ad27/enabled {}
+on 2: 2024-09-17 20:53:16,525 - DEBUG - http://localhost:52143 "GET /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element/d286b940-b814-403b-b334-c96b1422ad27/enabled HTTP/11" 200 0
+on 2: 2024-09-17 20:53:16,525 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Tue, 17 Sep 2024 19:53:15 GMT'})
+on 2: 2024-09-17 20:53:16,525 - DEBUG - Finished Request
+on 2: 2024-09-17 20:53:16,526 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element/d286b940-b814-403b-b334-c96b1422ad27/click {}
+on 2: 2024-09-17 20:53:16,759 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element/d286b940-b814-403b-b334-c96b1422ad27/click HTTP/11" 200 0
+on 2: 2024-09-17 20:53:16,759 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Tue, 17 Sep 2024 19:53:15 GMT'})
+on 2: 2024-09-17 20:53:16,760 - DEBUG - Finished Request
+on 2: 2024-09-17 20:53:16,761 - DEBUG - 'Accept' cookies button clicked successfully.
+on 3: 2024-09-17 20:53:16,761 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/elements {'using': 'css selector', 'value': 'input[aria-label="Currency Amount Field"]'}
+on 3: 2024-09-17 20:53:16,766 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/elements HTTP/11" 200 0
+on 3: 2024-09-17 20:53:16,766 - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"7afb0c57-98e1-4f18-abeb-f1d47cde6d8d"},{"element-6066-11e4-a52e-4f735466cecf":"f51ce62a-4a46-4845-9bff-3075f426fcf6"}]} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '169', 'date': 'Tue, 17 Sep 2024 19:53:16 GMT'})
+on 3: 2024-09-17 20:53:16,766 - DEBUG - Finished Request
+on 3: 2024-09-17 20:53:16,767 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f51ce62a-4a46-4845-9bff-3075f426fcf6'}, 'value']}
+on 3: 2024-09-17 20:53:16,772 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/execute/sync HTTP/11" 200 0
+on 3: 2024-09-17 20:53:16,772 - DEBUG - Remote response: status=200 | data={"value":"0.83"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '16', 'date': 'Tue, 17 Sep 2024 19:53:16 GMT'})
+on 3: 2024-09-17 20:53:16,773 - DEBUG - Finished Request
+on 3: 2024-09-17 20:53:16,773 - DEBUG - XMR trade price scraped successfully: 0.83XMR.
+on 4: 2024-09-17 20:53:16,773 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/url {'url': 'https://changenow.io/?from=ltc&to=xmr&amountTo=0.83'}
+on 4: 2024-09-17 20:53:17,991 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/url HTTP/11" 200 0
+on 4: 2024-09-17 20:53:17,991 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Tue, 17 Sep 2024 19:53:16 GMT'})
+on 4: 2024-09-17 20:53:17,991 - DEBUG - Finished Request
+on 4: 2024-09-17 20:53:21,002 - DEBUG - Site index1: Loaded successfully.
+on 5: 2024-09-17 20:53:21,002 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element {'using': 'css selector', 'value': '[id="amount-field"]'}
+on 5: 2024-09-17 20:53:21,013 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element HTTP/11" 200 0
+on 5: 2024-09-17 20:53:21,014 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"b41f029d-c476-4302-ae67-401855df1465"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Tue, 17 Sep 2024 19:53:21 GMT'})
+on 5: 2024-09-17 20:53:21,014 - DEBUG - Finished Request
+on 5: 2024-09-17 20:53:21,014 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'b41f029d-c476-4302-ae67-401855df1465'}, 'value']}
+on 5: 2024-09-17 20:53:21,020 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/execute/sync HTTP/11" 200 0
+on 5: 2024-09-17 20:53:21,020 - DEBUG - Remote response: status=200 | data={"value":"2.31658209"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '22', 'date': 'Tue, 17 Sep 2024 19:53:21 GMT'})
+on 5: 2024-09-17 20:53:21,020 - DEBUG - Finished Request
+on 5: 2024-09-17 20:53:21,021 - DEBUG - Successfully scraped CHANGENOW's XMR to LTC value: 2.31658209
+on 6: 2024-09-17 20:53:21,021 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/url {'url': 'https://changenow.io/?from=gbp&to=ltc&fiatMode=true&amount=109.0'}
+on 6: 2024-09-17 20:53:21,530 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/url HTTP/11" 200 0
+on 6: 2024-09-17 20:53:21,530 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Tue, 17 Sep 2024 19:53:21 GMT'})
+on 6: 2024-09-17 20:53:21,530 - DEBUG - Finished Request
+on 6: 2024-09-17 20:53:24,538 - DEBUG - Site index2: Loaded successfully.
+on 7: 2024-09-17 20:53:24,538 - DEBUG - POST http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element {'using': 'css selector', 'value': '.new-stepper-hints__rate'}
+on 7: 2024-09-17 20:53:24,542 - DEBUG - http://localhost:52143 "POST /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element HTTP/11" 200 0
+on 7: 2024-09-17 20:53:24,543 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"1773c047-311d-4062-abc8-9d80a4c1578a"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Tue, 17 Sep 2024 19:53:24 GMT'})
+on 7: 2024-09-17 20:53:24,543 - DEBUG - Finished Request
+on 7: 2024-09-17 20:53:24,544 - DEBUG - GET http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element/1773c047-311d-4062-abc8-9d80a4c1578a/text {}
+on 7: 2024-09-17 20:53:24,559 - DEBUG - http://localhost:52143 "GET /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/element/1773c047-311d-4062-abc8-9d80a4c1578a/text HTTP/11" 200 0
+on 7: 2024-09-17 20:53:24,559 - DEBUG - Remote response: status=200 | data={"value":"1 LTC ~ 49.85 GBP"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '29', 'date': 'Tue, 17 Sep 2024 19:53:24 GMT'})
+on 7: 2024-09-17 20:53:24,559 - DEBUG - Finished Request
+on 7: 2024-09-17 20:53:24,560 - DEBUG - Successfully scraped CHANGENOW's 1LTC to GBP value: 49.85
+on 8: 2024-09-17 20:53:24,560 - DEBUG - Gross trade price: £115.48161718649999
+on 8: 2024-09-17 20:53:24,561 - DEBUG - Rounded trade price: £115.48
+on 8: 2024-09-17 20:53:24,561 - DEBUG - With fees trade price: £115.98
+on 8: 2024-09-17 20:53:24,561 - DEBUG - Final trade price: £115.98
+on 9: 2024-09-17 20:53:24,562 - DEBUG - DELETE http://localhost:52143/session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/window {}
+on 9: 2024-09-17 20:53:25,413 - DEBUG - http://localhost:52143 "DELETE /session/9c07f7f6-2ebf-4dc4-87bb-fc695f960b70/window HTTP/11" 200 0
+on 9: 2024-09-17 20:53:25,413 - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '12', 'date': 'Tue, 17 Sep 2024 19:53:24 GMT'})
+on 9: 2024-09-17 20:53:25,413 - DEBUG - Finished Request
+2024-09-17 20:53:25,414 - INFO - Estimated trade price ~ £115.98
+2024-09-17 20:53:25,416 - INFO - Estimate saved: {'date_time': '2024-09-17 20:53:25', 'final_estimate': 115.98, 'initial_product_price': 109.0}
