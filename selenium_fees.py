@@ -1,5 +1,5 @@
 import base64
-from datetime import datetime
+from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 settings_file = 'settings.json'
 
@@ -342,9 +342,9 @@ def save_estimate(final_estimate, initial_product_price, fiat_curr, init_cryp, f
 
 
 # Function to read price data JSON and provided an estimated best time and price
-def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, final_crypto,
-                      tolerance=5, tolerance_increment=10, max_retries=10,
-                      filename='price_data.json'):
+# Function to read price data JSON and provide an estimated best time and price
+def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, final_crypto, days_to_search=7, tolerance=5,
+                      tolerance_increment=10, max_retries=10, filename='price_data.json'):
     try:
         # Update the price_data.json to include the most recent changes
         sync_data()
@@ -359,20 +359,37 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
         print_and_log(f"Error reading data from {filename}", logging.error)
         return
 
+    # Filter the data from the past specified days
+    data_to_use = datetime.now() - timedelta(days=days_to_search)
+    recent_data = [
+        entry for entry in data
+        if datetime.strptime(entry['date_time'], '%Y-%m-%d %H:%M:%S') >= data_to_use
+    ]
+
+    if not recent_data:
+        print_and_log(f"No data found in the past {days_to_search} days.", logging.error)
+        return
+
+    # Dictionary to store sums and counts of prices per quarter-hour for matching initial prices
     quarter_hourly_data = {}
 
+    # Function to check if a price is within a certain tolerance
     def is_within_tolerance(value1, value2, tol):
         return abs(value1 - value2) <= tol
 
+    # Helper function to round time to the nearest quarter-hour
     def round_to_nearest_quarter_hour(dt):
         minutes = (dt.minute // 15) * 15
         return dt.replace(minute=minutes, second=0, microsecond=0)
 
+    # Start with the initial tolerance
     current_tolerance = tolerance
 
+    # Try to filter data and widen the tolerance up to max_retries
     for attempt in range(max_retries):
+        # Filter data for entries with similar product prices and matching crypto values within current tolerance
         filtered_data = [
-            entry for entry in data
+            entry for entry in recent_data
             if (is_within_tolerance(entry['initial_product_price'], initial_product_price, current_tolerance) and
                 entry['fiat_currency'] == fiat_currency and
                 entry['initial_crypto'] == initial_crypto and
@@ -381,30 +398,40 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
 
         if filtered_data:
             logging.info(f"Data found within {current_tolerance} units of the initial product price.")
-            break
+            break  # If data is found, break the loop
         else:
             logging.info(f"No data found within {current_tolerance} units of initial price. Increasing tolerance...")
-            current_tolerance += tolerance_increment
+            current_tolerance += tolerance_increment  # Increase the tolerance
     else:
-        print_and_log(f"No sufficient data found for your config.", logging.error)
+        # If we complete all retries and still no data is found, exit the function
+        print_and_log(f"No sufficient data even after increasing the tolerance to {current_tolerance}.", logging.error)
         return
 
+    # Process the filtered data to calculate averages per quarter-hour
     for entry in filtered_data:
+        # Parse the date and time from the entry
         date_time = datetime.strptime(entry['date_time'], '%Y-%m-%d %H:%M:%S')
+
+        # Round the time to the nearest quarter-hour
         rounded_time = round_to_nearest_quarter_hour(date_time)
+
+        # Get the final estimate
         price = entry['final_estimate']
 
+        # Initialize or update the sum and count for the quarter-hour
         if rounded_time not in quarter_hourly_data:
             quarter_hourly_data[rounded_time] = {'sum': 0, 'count': 0}
 
         quarter_hourly_data[rounded_time]['sum'] += price
         quarter_hourly_data[rounded_time]['count'] += 1
 
+    # Calculate the average price per quarter-hour for the filtered data
     quarter_hourly_averages = {
         quarter_hour: quarter_hourly_data[quarter_hour]['sum'] / quarter_hourly_data[quarter_hour]['count']
         for quarter_hour in quarter_hourly_data
     }
 
+    # Find the quarter-hour with the lowest average price
     best_time = min(quarter_hourly_averages, key=quarter_hourly_averages.get)
     best_price = quarter_hourly_averages[best_time]
 
