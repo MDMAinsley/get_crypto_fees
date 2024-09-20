@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 settings_file = 'settings.json'
 
@@ -435,8 +435,12 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
     best_time = min(quarter_hourly_averages, key=quarter_hourly_averages.get)
     best_price = quarter_hourly_averages[best_time]
 
-    print_and_log(f"Best time to buy based on similar product prices is around {best_time.strftime('%H:%M')}"
-                  f" with an average price of £{best_price:.2f}", logging.info)
+    hour = best_time.strftime('%H')
+    am_pm = 'AM' if int(hour) < 12 else 'PM'
+    formatted_time = f"{hour}:{best_time.strftime('%M')}{am_pm}"
+
+    print_and_log(f"Best time to buy based on similar product prices is around {formatted_time} "
+                  f"with an average price of £{best_price:.2f}", logging.info)
 
 
 # Function to add a specific reply requirement onto the input function of Python

@@ -1,17 +1,12 @@
-2024-09-20 13:11:33,848 - INFO - Running application version v1.0.1
-2024-09-20 13:11:33,849 - INFO - Successfully loaded settings file.
-2024-09-20 13:11:37,925 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
-2024-09-20 13:11:38,076 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
-2024-09-20 13:11:38,080 - INFO - Attempting to download shared data from GitHub...
-2024-09-20 13:11:38,083 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
-2024-09-20 13:11:38,152 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 325
-2024-09-20 13:11:38,152 - INFO - Received response from GitHub.
-2024-09-20 13:11:38,152 - INFO - Downloaded shared data from GitHub.
-2024-09-20 13:11:38,154 - INFO - Attempting to upload merged data to GitHub...
-2024-09-20 13:11:38,156 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
-2024-09-20 13:11:38,442 - DEBUG - https://api.github.com:443 "GET /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
-2024-09-20 13:11:38,445 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
-2024-09-20 13:11:39,008 - DEBUG - https://api.github.com:443 "PUT /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
-2024-09-20 13:11:39,009 - INFO - Uploaded local data to GitHub.
-2024-09-20 13:11:39,013 - INFO - Data found within 5 units of the initial product price.
-2024-09-20 13:11:39,014 - INFO - Best time to buy based on similar product prices is around 02:30 with an average price of £107.83
+2024-09-20 13:47:52,915 - INFO - Running application version v1.0.2
+2024-09-20 13:47:52,916 - INFO - Successfully loaded settings file.
+2024-09-20 13:47:55,797 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-20 13:47:55,946 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-20 13:47:55,950 - INFO - Attempting to download shared data from GitHub...
+2024-09-20 13:47:55,952 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-09-20 13:47:56,025 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 357
+2024-09-20 13:47:56,026 - INFO - Received response from GitHub.
+2024-09-20 13:47:56,027 - INFO - Downloaded shared data from GitHub.
+2024-09-20 13:47:56,027 - INFO - Local data is the same as shared data. No upload needed.
+2024-09-20 13:47:56,034 - INFO - Data found within 5 units of the initial product price.
+2024-09-20 13:47:56,035 - INFO - Best time to buy based on similar product prices is around 02:30AM with an average price of £107.83
