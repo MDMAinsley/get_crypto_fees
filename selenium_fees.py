@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 settings_file = 'settings.json'
 
@@ -341,33 +341,63 @@ def save_estimate(final_estimate, initial_product_price, fiat_curr, init_cryp, f
     print_and_log("Estimated saved.", logging.info)
 
 
-# Function to read price data JSON and provided an estimated best time and price
 # Function to read price data JSON and provide an estimated best time and price
 def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, final_crypto, days_to_search=7, tolerance=5,
                       tolerance_increment=10, max_retries=10, filename='price_data.json'):
     try:
+        # Log initial parameters
+        logging.info(f"Starting analysis with parameters: initial_product_price={initial_product_price}, "
+                     f"fiat_currency={fiat_currency}, initial_crypto={initial_crypto}, "
+                     f"final_crypto={final_crypto}, days_to_search={days_to_search}")
+
         # Update the price_data.json to include the most recent changes
         sync_data()
 
         # Read the data from the file
         with open(filename, 'r') as file:
-            data = json.load(file)
+            content = file.read()
+            logging.info(f"Raw JSON content: {content}")
+            data = json.loads(content)
+            logging.info(f"Parsed JSON data: {data}")
+
+        # Log the number of entries loaded
+        logging.info(f"Loaded {len(data)} entries from {filename}")
     except FileNotFoundError:
-        print_and_log(f"No data found in {filename}", logging.error)
+        logging.error(f"No data found in {filename}")
         return
     except json.JSONDecodeError:
-        print_and_log(f"Error reading data from {filename}", logging.error)
+        logging.error(f"Error reading data from {filename}")
         return
 
-    # Filter the data from the past specified days
+    # Calculate the date to filter entries from
     data_to_use = datetime.now() - timedelta(days=days_to_search)
-    recent_data = [
-        entry for entry in data
-        if datetime.strptime(entry['date_time'], '%Y-%m-%d %H:%M:%S') >= data_to_use
-    ]
+    logging.info(f"Filtering data from the past {days_to_search} days (cutoff: {data_to_use}).")
+
+    # Initialize an empty list for recent_data
+    recent_data = []
+
+    # Iterate through each entry and parse date_time with logging
+    for entry in data:
+        try:
+            # Log the original and parsed date_time
+            logging.info(f"Original date_time string: {entry['date_time']}")
+            parsed_date_time = datetime.strptime(entry['date_time'], '%Y-%m-%d %H:%M:%S')
+            logging.info(f"Parsed date_time: {parsed_date_time}")
+
+            # Check if the parsed date_time is within the date range
+            if parsed_date_time >= data_to_use:
+                recent_data.append(entry)
+                logging.info(f"Entry from {parsed_date_time} added to recent_data.")
+            else:
+                logging.info(f"Entry from {parsed_date_time} is older than {data_to_use}, not added.")
+        except ValueError as e:
+            logging.error(f"Error parsing date_time for entry {entry}: {e}")
+
+    # Log how many entries were found
+    logging.info(f"Total entries found within the date range: {len(recent_data)}")
 
     if not recent_data:
-        print_and_log(f"No data found in the past {days_to_search} days.", logging.error)
+        logging.error(f"No data found in the past {days_to_search} days.")
         return
 
     # Dictionary to store sums and counts of prices per quarter-hour for matching initial prices
@@ -375,7 +405,18 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
 
     # Function to check if a price is within a certain tolerance
     def is_within_tolerance(value1, value2, tol):
-        return abs(value1 - value2) <= tol
+        # Log the values and tolerance before performing the check
+        logging.info(
+            f"Checking if value {value1} is within {tol} units of value {value2}. "
+            f"Difference: {abs(value1 - value2)}")
+
+        # Perform the tolerance check
+        within_tolerance = abs(value1 - value2) <= tol
+
+        # Log the result of the tolerance check
+        logging.info(f"Result: {'Within tolerance' if within_tolerance else 'Out of tolerance'}")
+
+        return within_tolerance
 
     # Helper function to round time to the nearest quarter-hour
     def round_to_nearest_quarter_hour(dt):
@@ -396,6 +437,9 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
                 entry['final_crypto'] == final_crypto)
         ]
 
+        # Log the number of filtered entries found
+        logging.info(f"Attempt {attempt + 1}: Found {len(filtered_data)} entries within {current_tolerance} tolerance.")
+
         if filtered_data:
             logging.info(f"Data found within {current_tolerance} units of the initial product price.")
             break  # If data is found, break the loop
@@ -404,7 +448,7 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
             current_tolerance += tolerance_increment  # Increase the tolerance
     else:
         # If we complete all retries and still no data is found, exit the function
-        print_and_log(f"No sufficient data even after increasing the tolerance to {current_tolerance}.", logging.error)
+        logging.error(f"No sufficient data even after increasing the tolerance to {current_tolerance}.")
         return
 
     # Process the filtered data to calculate averages per quarter-hour
@@ -439,8 +483,10 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
     am_pm = 'AM' if int(hour) < 12 else 'PM'
     formatted_time = f"{hour}:{best_time.strftime('%M')}{am_pm}"
 
-    print_and_log(f"Best time to buy based on similar product prices is around {formatted_time} "
-                  f"with an average price of £{best_price:.2f}", logging.info)
+    print_and_log(f"Best time to convert {fiat_currency.upper()} to {final_crypto.upper()} via "
+                  f"{initial_crypto.upper()} based on similar product prices is around {formatted_time} "
+                  f"with an average price of £{best_price:.2f} for a trade of approx. £{initial_product_price}",
+                  logging.info)
 
 
 # Function to add a specific reply requirement onto the input function of Python

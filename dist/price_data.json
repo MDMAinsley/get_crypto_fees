@@ -126,5 +126,13 @@
         "fiat_currency": "gbp",
         "initial_crypto": "ltc",
         "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 13:10:44",
+        "final_estimate": 108.99,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "btc",
+        "final_crypto": "xmr"
     }
 ]
