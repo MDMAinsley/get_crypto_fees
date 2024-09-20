@@ -1,15 +1,15 @@
-2024-09-20 19:52:46,635 - INFO - Running application version v1.0.3
-2024-09-20 19:52:46,636 - INFO - Successfully loaded settings file.
-2024-09-20 19:52:50,530 - INFO - Starting analysis with parameters: initial_product_price=109.0, fiat_currency=gbp, initial_crypto=ltc, final_crypto=xmr, days_to_search=7
-2024-09-20 19:52:50,533 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
-2024-09-20 19:52:50,657 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
-2024-09-20 19:52:50,659 - INFO - Attempting to download shared data from GitHub...
-2024-09-20 19:52:50,661 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
-2024-09-20 19:52:50,730 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 339
-2024-09-20 19:52:50,731 - INFO - Received response from GitHub.
-2024-09-20 19:52:50,731 - INFO - Downloaded shared data from GitHub.
-2024-09-20 19:52:50,731 - INFO - Local data is the same as shared data. No upload needed.
-2024-09-20 19:52:50,732 - INFO - Raw JSON content: [
+2024-09-20 20:16:35,626 - INFO - Running application version v1.0.4
+2024-09-20 20:16:35,627 - INFO - Successfully loaded settings file.
+2024-09-20 20:16:38,358 - INFO - Starting analysis with parameters: initial_product_price=109.0, fiat_currency=gbp, initial_crypto=ltc, final_crypto=xmr, days_to_search=7
+2024-09-20 20:16:38,361 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-20 20:16:38,493 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-20 20:16:38,495 - INFO - Attempting to download shared data from GitHub...
+2024-09-20 20:16:38,496 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-09-20 20:16:38,568 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 357
+2024-09-20 20:16:38,569 - INFO - Received response from GitHub.
+2024-09-20 20:16:38,569 - INFO - Downloaded shared data from GitHub.
+2024-09-20 20:16:38,569 - INFO - Local data is the same as shared data. No upload needed.
+2024-09-20 20:16:38,569 - INFO - Raw JSON content: [
     {
         "date_time": "2024-09-17 16:33:44",
         "final_estimate": 118.05,
@@ -147,95 +147,200 @@
         "final_crypto": "xmr"
     }
 ]
-2024-09-20 19:52:50,732 - INFO - Parsed JSON data: [{'date_time': '2024-09-17 16:33:44', 'final_estimate': 118.05, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-17 16:55:00', 'final_estimate': 117.54, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 00:17:37', 'final_estimate': 107.5, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:17:24', 'final_estimate': 106.77, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:22:31', 'final_estimate': 107.13, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:36:10', 'final_estimate': 108.39, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:34:00', 'final_estimate': 107.67, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:36:14', 'final_estimate': 107.81, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:37:21', 'final_estimate': 107.84, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:01:51', 'final_estimate': 118.01, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:05:07', 'final_estimate': 118.03, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:44:27', 'final_estimate': 117.24, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 04:06:16', 'final_estimate': 117.15, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 12:59:47', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:00:25', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:01:51', 'final_estimate': 116.69, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:10:44', 'final_estimate': 108.99, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}]
-2024-09-20 19:52:50,732 - INFO - Loaded 17 entries from price_data.json
-2024-09-20 19:52:50,732 - INFO - Filtering data from the past 7 days (cutoff: 2024-09-13 19:52:50.732343).
-2024-09-20 19:52:50,732 - INFO - Original date_time string: 2024-09-17 16:33:44
-2024-09-20 19:52:50,735 - INFO - Parsed date_time: 2024-09-17 16:33:44
-2024-09-20 19:52:50,735 - INFO - Entry from 2024-09-17 16:33:44 added to recent_data.
-2024-09-20 19:52:50,735 - INFO - Original date_time string: 2024-09-17 16:55:00
-2024-09-20 19:52:50,735 - INFO - Parsed date_time: 2024-09-17 16:55:00
-2024-09-20 19:52:50,735 - INFO - Entry from 2024-09-17 16:55:00 added to recent_data.
-2024-09-20 19:52:50,736 - INFO - Original date_time string: 2024-09-20 00:17:37
-2024-09-20 19:52:50,736 - INFO - Parsed date_time: 2024-09-20 00:17:37
-2024-09-20 19:52:50,736 - INFO - Entry from 2024-09-20 00:17:37 added to recent_data.
-2024-09-20 19:52:50,736 - INFO - Original date_time string: 2024-09-20 01:17:24
-2024-09-20 19:52:50,736 - INFO - Parsed date_time: 2024-09-20 01:17:24
-2024-09-20 19:52:50,736 - INFO - Entry from 2024-09-20 01:17:24 added to recent_data.
-2024-09-20 19:52:50,736 - INFO - Original date_time string: 2024-09-20 01:22:31
-2024-09-20 19:52:50,736 - INFO - Parsed date_time: 2024-09-20 01:22:31
-2024-09-20 19:52:50,736 - INFO - Entry from 2024-09-20 01:22:31 added to recent_data.
-2024-09-20 19:52:50,736 - INFO - Original date_time string: 2024-09-20 01:36:10
-2024-09-20 19:52:50,736 - INFO - Parsed date_time: 2024-09-20 01:36:10
-2024-09-20 19:52:50,736 - INFO - Entry from 2024-09-20 01:36:10 added to recent_data.
-2024-09-20 19:52:50,736 - INFO - Original date_time string: 2024-09-20 02:34:00
-2024-09-20 19:52:50,736 - INFO - Parsed date_time: 2024-09-20 02:34:00
-2024-09-20 19:52:50,736 - INFO - Entry from 2024-09-20 02:34:00 added to recent_data.
-2024-09-20 19:52:50,737 - INFO - Original date_time string: 2024-09-20 02:36:14
-2024-09-20 19:52:50,737 - INFO - Parsed date_time: 2024-09-20 02:36:14
-2024-09-20 19:52:50,737 - INFO - Entry from 2024-09-20 02:36:14 added to recent_data.
-2024-09-20 19:52:50,737 - INFO - Original date_time string: 2024-09-20 02:37:21
-2024-09-20 19:52:50,737 - INFO - Parsed date_time: 2024-09-20 02:37:21
-2024-09-20 19:52:50,737 - INFO - Entry from 2024-09-20 02:37:21 added to recent_data.
-2024-09-20 19:52:50,737 - INFO - Original date_time string: 2024-09-20 03:01:51
-2024-09-20 19:52:50,737 - INFO - Parsed date_time: 2024-09-20 03:01:51
-2024-09-20 19:52:50,737 - INFO - Entry from 2024-09-20 03:01:51 added to recent_data.
-2024-09-20 19:52:50,738 - INFO - Original date_time string: 2024-09-20 03:05:07
-2024-09-20 19:52:50,738 - INFO - Parsed date_time: 2024-09-20 03:05:07
-2024-09-20 19:52:50,738 - INFO - Entry from 2024-09-20 03:05:07 added to recent_data.
-2024-09-20 19:52:50,738 - INFO - Original date_time string: 2024-09-20 03:44:27
-2024-09-20 19:52:50,738 - INFO - Parsed date_time: 2024-09-20 03:44:27
-2024-09-20 19:52:50,738 - INFO - Entry from 2024-09-20 03:44:27 added to recent_data.
-2024-09-20 19:52:50,738 - INFO - Original date_time string: 2024-09-20 04:06:16
-2024-09-20 19:52:50,738 - INFO - Parsed date_time: 2024-09-20 04:06:16
-2024-09-20 19:52:50,738 - INFO - Entry from 2024-09-20 04:06:16 added to recent_data.
-2024-09-20 19:52:50,738 - INFO - Original date_time string: 2024-09-20 12:59:47
-2024-09-20 19:52:50,738 - INFO - Parsed date_time: 2024-09-20 12:59:47
-2024-09-20 19:52:50,739 - INFO - Entry from 2024-09-20 12:59:47 added to recent_data.
-2024-09-20 19:52:50,739 - INFO - Original date_time string: 2024-09-20 13:00:25
-2024-09-20 19:52:50,739 - INFO - Parsed date_time: 2024-09-20 13:00:25
-2024-09-20 19:52:50,739 - INFO - Entry from 2024-09-20 13:00:25 added to recent_data.
-2024-09-20 19:52:50,739 - INFO - Original date_time string: 2024-09-20 13:01:51
-2024-09-20 19:52:50,739 - INFO - Parsed date_time: 2024-09-20 13:01:51
-2024-09-20 19:52:50,739 - INFO - Entry from 2024-09-20 13:01:51 added to recent_data.
-2024-09-20 19:52:50,739 - INFO - Original date_time string: 2024-09-20 13:10:44
-2024-09-20 19:52:50,739 - INFO - Parsed date_time: 2024-09-20 13:10:44
-2024-09-20 19:52:50,739 - INFO - Entry from 2024-09-20 13:10:44 added to recent_data.
-2024-09-20 19:52:50,739 - INFO - Total entries found within the date range: 17
-2024-09-20 19:52:50,740 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
-2024-09-20 19:52:50,740 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,740 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
-2024-09-20 19:52:50,740 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,740 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,740 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,740 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,740 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,740 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,740 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,740 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,740 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,741 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,741 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,741 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,741 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,741 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,741 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,741 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 19:52:50,741 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,741 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 19:52:50,741 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,741 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 19:52:50,741 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,742 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 19:52:50,742 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,742 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 19:52:50,742 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,742 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 19:52:50,742 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,742 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 19:52:50,742 - INFO - Result: Within tolerance
-2024-09-20 19:52:50,742 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 19:52:50,742 - INFO - Result: Out of tolerance
-2024-09-20 19:52:50,742 - INFO - Attempt 1: Found 9 entries within 5 tolerance.
-2024-09-20 19:52:50,742 - INFO - Data found within 5 units of the initial product price.
-2024-09-20 19:52:50,743 - INFO - Best time to buy based on similar product prices is around 13:00PM with an average price of £116.78
+2024-09-20 20:16:38,570 - INFO - Parsed JSON data: [{'date_time': '2024-09-17 16:33:44', 'final_estimate': 118.05, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-17 16:55:00', 'final_estimate': 117.54, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 00:17:37', 'final_estimate': 107.5, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:17:24', 'final_estimate': 106.77, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:22:31', 'final_estimate': 107.13, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:36:10', 'final_estimate': 108.39, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:34:00', 'final_estimate': 107.67, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:36:14', 'final_estimate': 107.81, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:37:21', 'final_estimate': 107.84, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:01:51', 'final_estimate': 118.01, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:05:07', 'final_estimate': 118.03, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:44:27', 'final_estimate': 117.24, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 04:06:16', 'final_estimate': 117.15, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 12:59:47', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:00:25', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:01:51', 'final_estimate': 116.69, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:10:44', 'final_estimate': 108.99, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}]
+2024-09-20 20:16:38,570 - INFO - Loaded 17 entries from price_data.json
+2024-09-20 20:16:38,570 - INFO - Filtering data from the past 7 days (cutoff: 2024-09-13 20:16:38.570788).
+2024-09-20 20:16:38,570 - INFO - Original date_time string: 2024-09-17 16:33:44
+2024-09-20 20:16:38,573 - INFO - Parsed date_time: 2024-09-17 16:33:44
+2024-09-20 20:16:38,573 - INFO - Entry from 2024-09-17 16:33:44 added to recent_data.
+2024-09-20 20:16:38,573 - INFO - Original date_time string: 2024-09-17 16:55:00
+2024-09-20 20:16:38,573 - INFO - Parsed date_time: 2024-09-17 16:55:00
+2024-09-20 20:16:38,573 - INFO - Entry from 2024-09-17 16:55:00 added to recent_data.
+2024-09-20 20:16:38,573 - INFO - Original date_time string: 2024-09-20 00:17:37
+2024-09-20 20:16:38,573 - INFO - Parsed date_time: 2024-09-20 00:17:37
+2024-09-20 20:16:38,573 - INFO - Entry from 2024-09-20 00:17:37 added to recent_data.
+2024-09-20 20:16:38,573 - INFO - Original date_time string: 2024-09-20 01:17:24
+2024-09-20 20:16:38,573 - INFO - Parsed date_time: 2024-09-20 01:17:24
+2024-09-20 20:16:38,573 - INFO - Entry from 2024-09-20 01:17:24 added to recent_data.
+2024-09-20 20:16:38,574 - INFO - Original date_time string: 2024-09-20 01:22:31
+2024-09-20 20:16:38,574 - INFO - Parsed date_time: 2024-09-20 01:22:31
+2024-09-20 20:16:38,574 - INFO - Entry from 2024-09-20 01:22:31 added to recent_data.
+2024-09-20 20:16:38,574 - INFO - Original date_time string: 2024-09-20 01:36:10
+2024-09-20 20:16:38,574 - INFO - Parsed date_time: 2024-09-20 01:36:10
+2024-09-20 20:16:38,574 - INFO - Entry from 2024-09-20 01:36:10 added to recent_data.
+2024-09-20 20:16:38,574 - INFO - Original date_time string: 2024-09-20 02:34:00
+2024-09-20 20:16:38,574 - INFO - Parsed date_time: 2024-09-20 02:34:00
+2024-09-20 20:16:38,574 - INFO - Entry from 2024-09-20 02:34:00 added to recent_data.
+2024-09-20 20:16:38,574 - INFO - Original date_time string: 2024-09-20 02:36:14
+2024-09-20 20:16:38,574 - INFO - Parsed date_time: 2024-09-20 02:36:14
+2024-09-20 20:16:38,574 - INFO - Entry from 2024-09-20 02:36:14 added to recent_data.
+2024-09-20 20:16:38,574 - INFO - Original date_time string: 2024-09-20 02:37:21
+2024-09-20 20:16:38,574 - INFO - Parsed date_time: 2024-09-20 02:37:21
+2024-09-20 20:16:38,574 - INFO - Entry from 2024-09-20 02:37:21 added to recent_data.
+2024-09-20 20:16:38,574 - INFO - Original date_time string: 2024-09-20 03:01:51
+2024-09-20 20:16:38,575 - INFO - Parsed date_time: 2024-09-20 03:01:51
+2024-09-20 20:16:38,575 - INFO - Entry from 2024-09-20 03:01:51 added to recent_data.
+2024-09-20 20:16:38,575 - INFO - Original date_time string: 2024-09-20 03:05:07
+2024-09-20 20:16:38,575 - INFO - Parsed date_time: 2024-09-20 03:05:07
+2024-09-20 20:16:38,575 - INFO - Entry from 2024-09-20 03:05:07 added to recent_data.
+2024-09-20 20:16:38,575 - INFO - Original date_time string: 2024-09-20 03:44:27
+2024-09-20 20:16:38,575 - INFO - Parsed date_time: 2024-09-20 03:44:27
+2024-09-20 20:16:38,575 - INFO - Entry from 2024-09-20 03:44:27 added to recent_data.
+2024-09-20 20:16:38,575 - INFO - Original date_time string: 2024-09-20 04:06:16
+2024-09-20 20:16:38,575 - INFO - Parsed date_time: 2024-09-20 04:06:16
+2024-09-20 20:16:38,575 - INFO - Entry from 2024-09-20 04:06:16 added to recent_data.
+2024-09-20 20:16:38,575 - INFO - Original date_time string: 2024-09-20 12:59:47
+2024-09-20 20:16:38,575 - INFO - Parsed date_time: 2024-09-20 12:59:47
+2024-09-20 20:16:38,575 - INFO - Entry from 2024-09-20 12:59:47 added to recent_data.
+2024-09-20 20:16:38,575 - INFO - Original date_time string: 2024-09-20 13:00:25
+2024-09-20 20:16:38,575 - INFO - Parsed date_time: 2024-09-20 13:00:25
+2024-09-20 20:16:38,575 - INFO - Entry from 2024-09-20 13:00:25 added to recent_data.
+2024-09-20 20:16:38,576 - INFO - Original date_time string: 2024-09-20 13:01:51
+2024-09-20 20:16:38,576 - INFO - Parsed date_time: 2024-09-20 13:01:51
+2024-09-20 20:16:38,576 - INFO - Entry from 2024-09-20 13:01:51 added to recent_data.
+2024-09-20 20:16:38,576 - INFO - Original date_time string: 2024-09-20 13:10:44
+2024-09-20 20:16:38,576 - INFO - Parsed date_time: 2024-09-20 13:10:44
+2024-09-20 20:16:38,576 - INFO - Entry from 2024-09-20 13:10:44 added to recent_data.
+2024-09-20 20:16:38,576 - INFO - Total entries found within the date range: 17
+2024-09-20 20:16:38,576 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
+2024-09-20 20:16:38,576 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,576 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
+2024-09-20 20:16:38,576 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,576 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,576 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,576 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,576 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,576 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,576 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,576 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,577 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,577 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,577 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,577 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-20 20:16:38,577 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-20 20:16:38,577 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-20 20:16:38,577 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-20 20:16:38,577 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-20 20:16:38,577 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-20 20:16:38,577 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,577 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-20 20:16:38,578 - INFO - Result: Within tolerance
+2024-09-20 20:16:38,578 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-20 20:16:38,578 - INFO - Result: Out of tolerance
+2024-09-20 20:16:38,578 - INFO - Attempt 1: Found 9 entries within 5 tolerance.
+2024-09-20 20:16:38,578 - INFO - Data found within 5 units of the initial product price.
+2024-09-20 20:16:38,578 - INFO - ----------Best Estimates----------
+2024-09-20 20:16:38,579 - INFO - For GBP to XMR via LTC.
+2024-09-20 20:16:38,579 - INFO - Best time to convert is around 13:00PM.
+2024-09-20 20:16:38,579 - INFO - For an average trade price of £116.78.
+2024-09-20 20:16:38,580 - INFO - ----------Trade Insights----------
+2024-09-20 20:16:38,580 - INFO - Initial trade amount - £109.00
+2024-09-20 20:16:38,580 - INFO - Total trade fees - £7.78
+on 0: 2024-09-20 20:17:16,589 - DEBUG - Main function now running.
+on 0: 2024-09-20 20:17:16,590 - INFO - ====== WebDriver manager ======
+on 0: 2024-09-20 20:17:17,859 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-20 20:17:17,859 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-20 20:17:18,093 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 None
+on 0: 2024-09-20 20:17:18,096 - INFO - Get LATEST geckodriver version for 130.0 firefox
+on 0: 2024-09-20 20:17:18,100 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+on 0: 2024-09-20 20:17:18,203 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/geckodriver/releases/latest HTTP/11" 200 2708
+on 0: 2024-09-20 20:17:18,205 - INFO - Driver [C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe] found in cache
+on 0: 2024-09-20 20:17:18,205 - DEBUG - Skipping Selenium Manager; path to firefox driver specified in Service class: C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe
+on 0: 2024-09-20 20:17:18,210 - DEBUG - Started executable: `C:\Users\MDMAinsley\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe` in a child process with pid: 9632 using 0 to output -3
+on 0: 2024-09-20 20:17:19,242 - DEBUG - POST http://localhost:61215/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'firefox', 'acceptInsecureCerts': True, 'moz:debuggerAddress': True, 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'moz:firefoxOptions': {'prefs': {'remote.active-protocols': 3}, 'args': ['--headless']}}}}
+on 0: 2024-09-20 20:17:19,243 - DEBUG - Starting new HTTP connection (1): localhost:61215
+on 0: 2024-09-20 20:17:26,479 - DEBUG - http://localhost:61215 "POST /session HTTP/11" 200 0
+on 0: 2024-09-20 20:17:26,479 - DEBUG - Remote response: status=200 | data={"value":{"sessionId":"02d3e380-cc10-43c7-8a91-52374eef0bb8","capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"130.0","moz:accessibilityChecks":false,"moz:buildID":"20240829075237","moz:debuggerAddress":"127.0.0.1:61216","moz:geckodriverVersion":"0.35.0","moz:headless":true,"moz:platformVersion":"10.0","moz:processID":1864,"moz:profile":"C:\\Users\\MDMAIN~1\\AppData\\Local\\Temp\\rust_mozprofileRSVbCi","moz:shutdownTimeout":60000,"moz:webdriverClick":true,"moz:windowless":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0"}}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '840', 'date': 'Fri, 20 Sep 2024 19:17:21 GMT'})
+on 0: 2024-09-20 20:17:26,479 - DEBUG - Finished Request
+on 0: 2024-09-20 20:17:26,479 - DEBUG - Webdriver instance created succesfully.
+on 1: 2024-09-20 20:17:26,480 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/url {'url': 'https://www.google.com/search?q=109.0gbp+to+xmr'}
+on 1: 2024-09-20 20:17:27,588 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/url HTTP/11" 200 0
+on 1: 2024-09-20 20:17:27,588 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 19:17:26 GMT'})
+on 1: 2024-09-20 20:17:27,588 - DEBUG - Finished Request
+on 1: 2024-09-20 20:17:27,588 - DEBUG - Site index0: Loaded successfully.
+on 2: 2024-09-20 20:17:27,589 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element {'using': 'css selector', 'value': '[id="L2AGLb"]'}
+on 2: 2024-09-20 20:17:27,662 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element HTTP/11" 200 0
+on 2: 2024-09-20 20:17:27,663 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f2d10cc9-e47c-4f14-8b09-f59cb43c183c"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Fri, 20 Sep 2024 19:17:27 GMT'})
+on 2: 2024-09-20 20:17:27,663 - DEBUG - Finished Request
+on 2: 2024-09-20 20:17:27,665 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f2d10cc9-e47c-4f14-8b09-f59cb43c183c'}]}
+on 2: 2024-09-20 20:17:27,689 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/execute/sync HTTP/11" 200 0
+on 2: 2024-09-20 20:17:27,690 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 19:17:27 GMT'})
+on 2: 2024-09-20 20:17:27,690 - DEBUG - Finished Request
+on 2: 2024-09-20 20:17:27,690 - DEBUG - GET http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element/f2d10cc9-e47c-4f14-8b09-f59cb43c183c/enabled {}
+on 2: 2024-09-20 20:17:27,707 - DEBUG - http://localhost:61215 "GET /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element/f2d10cc9-e47c-4f14-8b09-f59cb43c183c/enabled HTTP/11" 200 0
+on 2: 2024-09-20 20:17:27,707 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 19:17:27 GMT'})
+on 2: 2024-09-20 20:17:27,707 - DEBUG - Finished Request
+on 2: 2024-09-20 20:17:27,708 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element/f2d10cc9-e47c-4f14-8b09-f59cb43c183c/click {}
+on 2: 2024-09-20 20:17:27,971 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element/f2d10cc9-e47c-4f14-8b09-f59cb43c183c/click HTTP/11" 200 0
+on 2: 2024-09-20 20:17:27,972 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 19:17:27 GMT'})
+on 2: 2024-09-20 20:17:27,972 - DEBUG - Finished Request
+on 2: 2024-09-20 20:17:27,972 - DEBUG - 'Accept' cookies button clicked successfully.
+on 3: 2024-09-20 20:17:27,972 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/elements {'using': 'css selector', 'value': 'input[aria-label="Currency Amount Field"]'}
+on 3: 2024-09-20 20:17:27,977 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/elements HTTP/11" 200 0
+on 3: 2024-09-20 20:17:27,977 - DEBUG - Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"79205bbf-a1a0-4a80-8e4d-acebefdb0649"},{"element-6066-11e4-a52e-4f735466cecf":"966fd776-0893-49cb-be2e-8c4005fcddd3"}]} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '169', 'date': 'Fri, 20 Sep 2024 19:17:27 GMT'})
+on 3: 2024-09-20 20:17:27,977 - DEBUG - Finished Request
+on 3: 2024-09-20 20:17:27,979 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': '966fd776-0893-49cb-be2e-8c4005fcddd3'}, 'value']}
+on 3: 2024-09-20 20:17:27,992 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/execute/sync HTTP/11" 200 0
+on 3: 2024-09-20 20:17:27,993 - DEBUG - Remote response: status=200 | data={"value":"0.82"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '16', 'date': 'Fri, 20 Sep 2024 19:17:27 GMT'})
+on 3: 2024-09-20 20:17:27,993 - DEBUG - Finished Request
+on 3: 2024-09-20 20:17:27,994 - DEBUG - XMR trade price scraped successfully: 0.82XMR.
+on 4: 2024-09-20 20:17:27,994 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/url {'url': 'https://changenow.io/?from=ltc&to=xmr&amountTo=0.82'}
+on 4: 2024-09-20 20:17:29,165 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/url HTTP/11" 200 0
+on 4: 2024-09-20 20:17:29,165 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 19:17:27 GMT'})
+on 4: 2024-09-20 20:17:29,165 - DEBUG - Finished Request
+on 4: 2024-09-20 20:17:32,167 - DEBUG - Site index1: Loaded successfully.
+on 5: 2024-09-20 20:17:32,167 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element {'using': 'css selector', 'value': '[id="amount-field"]'}
+on 5: 2024-09-20 20:17:32,180 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element HTTP/11" 200 0
+on 5: 2024-09-20 20:17:32,181 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"a408a46e-9a3a-4177-a66a-493d63ae1f01"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Fri, 20 Sep 2024 19:17:32 GMT'})
+on 5: 2024-09-20 20:17:32,181 - DEBUG - Finished Request
+on 5: 2024-09-20 20:17:32,181 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'a408a46e-9a3a-4177-a66a-493d63ae1f01'}, 'value']}
+on 5: 2024-09-20 20:17:32,190 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/execute/sync HTTP/11" 200 0
+on 5: 2024-09-20 20:17:32,190 - DEBUG - Remote response: status=200 | data={"value":"2.30299529"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '22', 'date': 'Fri, 20 Sep 2024 19:17:32 GMT'})
+on 5: 2024-09-20 20:17:32,190 - DEBUG - Finished Request
+on 5: 2024-09-20 20:17:32,191 - DEBUG - Successfully scraped CHANGENOW's XMR to LTC value: 2.30299529
+on 6: 2024-09-20 20:17:32,192 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/url {'url': 'https://changenow.io/?from=gbp&to=ltc&fiatMode=true&amount=109.0'}
+on 6: 2024-09-20 20:17:32,839 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/url HTTP/11" 200 0
+on 6: 2024-09-20 20:17:32,840 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '14', 'date': 'Fri, 20 Sep 2024 19:17:32 GMT'})
+on 6: 2024-09-20 20:17:32,840 - DEBUG - Finished Request
+on 6: 2024-09-20 20:17:35,842 - DEBUG - Site index2: Loaded successfully.
+on 7: 2024-09-20 20:17:35,842 - DEBUG - POST http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element {'using': 'css selector', 'value': '.new-stepper-hints__rate'}
+on 7: 2024-09-20 20:17:35,845 - DEBUG - http://localhost:61215 "POST /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element HTTP/11" 200 0
+on 7: 2024-09-20 20:17:35,846 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"3f6faf43-1999-44ef-97a8-93bd8cd675fb"}} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '88', 'date': 'Fri, 20 Sep 2024 19:17:35 GMT'})
+on 7: 2024-09-20 20:17:35,846 - DEBUG - Finished Request
+on 7: 2024-09-20 20:17:35,847 - DEBUG - GET http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element/3f6faf43-1999-44ef-97a8-93bd8cd675fb/text {}
+on 7: 2024-09-20 20:17:35,857 - DEBUG - http://localhost:61215 "GET /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/element/3f6faf43-1999-44ef-97a8-93bd8cd675fb/text HTTP/11" 200 0
+on 7: 2024-09-20 20:17:35,857 - DEBUG - Remote response: status=200 | data={"value":"1 LTC ~ 50.67 GBP"} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '29', 'date': 'Fri, 20 Sep 2024 19:17:35 GMT'})
+on 7: 2024-09-20 20:17:35,857 - DEBUG - Finished Request
+on 7: 2024-09-20 20:17:35,859 - DEBUG - Successfully scraped CHANGENOW's 1LTC to GBP value: 50.67
+on 8: 2024-09-20 20:17:35,859 - DEBUG - Gross trade price: £116.69277134430001
+on 8: 2024-09-20 20:17:35,859 - DEBUG - Rounded trade price: £116.69
+on 8: 2024-09-20 20:17:35,860 - DEBUG - With fees trade price: £117.19
+on 8: 2024-09-20 20:17:35,860 - DEBUG - Final trade price: £117.19
+on 9: 2024-09-20 20:17:35,861 - DEBUG - DELETE http://localhost:61215/session/02d3e380-cc10-43c7-8a91-52374eef0bb8/window {}
+on 9: 2024-09-20 20:17:36,741 - DEBUG - http://localhost:61215 "DELETE /session/02d3e380-cc10-43c7-8a91-52374eef0bb8/window HTTP/11" 200 0
+on 9: 2024-09-20 20:17:36,741 - DEBUG - Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-cache', 'content-length': '12', 'date': 'Fri, 20 Sep 2024 19:17:35 GMT'})
+on 9: 2024-09-20 20:17:36,741 - DEBUG - Finished Request
+2024-09-20 20:17:37,036 - INFO - Estimated trade price ~ £117.19
+2024-09-20 20:17:37,038 - INFO - Estimated saved.
+2024-09-20 20:17:37,047 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-20 20:17:37,195 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-20 20:17:37,198 - INFO - Attempting to download shared data from GitHub...
+2024-09-20 20:17:37,199 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-09-20 20:17:37,263 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 357
+2024-09-20 20:17:37,264 - INFO - Received response from GitHub.
+2024-09-20 20:17:37,264 - INFO - Downloaded shared data from GitHub.
+2024-09-20 20:17:37,267 - INFO - Attempting to upload merged data to GitHub...
+2024-09-20 20:17:37,269 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-20 20:17:37,563 - DEBUG - https://api.github.com:443 "GET /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
+2024-09-20 20:17:37,565 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-20 20:17:38,149 - DEBUG - https://api.github.com:443 "PUT /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
+2024-09-20 20:17:38,150 - INFO - Uploaded local data to GitHub.

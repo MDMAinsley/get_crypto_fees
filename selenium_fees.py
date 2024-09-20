@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 
 settings_file = 'settings.json'
 
@@ -483,9 +483,18 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
     am_pm = 'AM' if int(hour) < 12 else 'PM'
     formatted_time = f"{hour}:{best_time.strftime('%M')}{am_pm}"
 
-    print_and_log(f"Best time to convert {fiat_currency.upper()} to {final_crypto.upper()} via "
-                  f"{initial_crypto.upper()} based on similar product prices is around {formatted_time} "
-                  f"with an average price of £{best_price:.2f} for a trade of approx. £{initial_product_price}",
+    print_and_log(f"----------Best Estimates----------", logging.info)
+    print_and_log(f"For {fiat_currency.upper()} to {final_crypto.upper()} via {initial_crypto.upper()}.",
+                  logging.info)
+    print_and_log(f"Best time to convert is around {formatted_time}.",
+                  logging.info)
+    print_and_log(f"For an average trade price of £{best_price:.2f}.",
+                  logging.info)
+    print()
+    print_and_log(f"----------Trade Insights----------", logging.info)
+    print_and_log(f"Initial trade amount - £{initial_product_price:.2f}",
+                  logging.info)
+    print_and_log(f"Total trade fees - £{best_price - initial_product_price:.2f}",
                   logging.info)
 
 
