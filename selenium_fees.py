@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 
 settings_file = 'settings.json'
 
@@ -496,6 +496,7 @@ def analyse_best_time(initial_product_price, fiat_currency, initial_crypto, fina
                   logging.info)
     print_and_log(f"Total trade fees - £{best_price - initial_product_price:.2f}",
                   logging.info)
+    print()
 
 
 # Function to add a specific reply requirement onto the input function of Python
@@ -704,6 +705,8 @@ def main():
         final_crypto = settings['final_crypto']
         time.sleep(2)
         clear_console()
+        # Display best time estimate
+        analyse_best_time(item_purchase_price, fiat_currency, initial_crypto, final_crypto)
         # Present user with first time config or ask user if they need to alter settings
         if do_setup:
             print_and_log("Running first time configuration.", logging.info)
@@ -733,10 +736,6 @@ def main():
                  f"Searching {initial_crypto.upper()} to {fiat_currency.upper()} rate.",
                  f"Storing {initial_crypto.upper()} to {fiat_currency} rate.", "Calculating final trade price."]
 
-        # Display best time estimate
-        analyse_best_time(item_purchase_price, fiat_currency, initial_crypto, final_crypto)
-        input("Press Enter to continue...")
-        clear_console()
         # Create the progress bar
         with alive_bar(len(tasks), spinner='classic', bar='classic') as bar:
             current_task = 0
