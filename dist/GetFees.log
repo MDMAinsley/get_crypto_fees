@@ -1,20 +1,18 @@
-2024-09-20 20:27:20,399 - INFO - Running application version v1.0.5
-2024-09-20 20:27:20,400 - INFO - Successfully loaded settings file.
-2024-09-20 20:27:23,759 - INFO - Starting analysis with parameters: initial_product_price=109.0, fiat_currency=gbp, initial_crypto=ltc, final_crypto=xmr, days_to_search=7
-2024-09-20 20:27:23,762 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
-2024-09-20 20:27:23,891 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
-2024-09-20 20:27:23,894 - INFO - Attempting to download shared data from GitHub...
-2024-09-20 20:27:23,896 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
-2024-09-20 20:27:24,109 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 367
-2024-09-20 20:27:24,109 - INFO - Received response from GitHub.
-2024-09-20 20:27:24,110 - INFO - Downloaded shared data from GitHub.
-2024-09-20 20:27:24,113 - INFO - Attempting to upload merged data to GitHub...
-2024-09-20 20:27:24,115 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
-2024-09-20 20:27:24,454 - DEBUG - https://api.github.com:443 "GET /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
-2024-09-20 20:27:24,456 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
-2024-09-20 20:27:25,053 - DEBUG - https://api.github.com:443 "PUT /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
-2024-09-20 20:27:25,054 - INFO - Uploaded local data to GitHub.
-2024-09-20 20:27:25,055 - INFO - Raw JSON content: [
+2024-09-24 04:03:11,097 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-24 04:03:11,233 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-24 04:03:11,235 - INFO - Connection active.
+2024-09-24 04:03:11,236 - INFO - Running application version v1.1.0
+2024-09-24 04:03:11,236 - INFO - Successfully loaded settings file.
+2024-09-24 04:03:13,288 - INFO - Starting analysis with parameters: initial_product_price=109.0, fiat_currency=gbp, initial_crypto=ltc, final_crypto=xmr, days_to_search=7
+2024-09-24 04:03:13,289 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-24 04:03:13,413 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-24 04:03:13,415 - INFO - Attempting to download shared data from GitHub...
+2024-09-24 04:03:13,416 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-09-24 04:03:13,486 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 599
+2024-09-24 04:03:13,486 - INFO - Received response from GitHub.
+2024-09-24 04:03:13,486 - INFO - Downloaded shared data from GitHub.
+2024-09-24 04:03:13,487 - INFO - Local data is the same as shared data. No upload needed.
+2024-09-24 04:03:13,487 - INFO - Raw JSON content: [
     {
         "date_time": "2024-09-17 16:33:44",
         "final_estimate": 118.05,
@@ -158,108 +156,420 @@
         "fiat_currency": "gbp",
         "initial_crypto": "ltc",
         "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:25:35",
+        "final_estimate": 117.19,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:34:11",
+        "final_estimate": 117.04,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:36:39",
+        "final_estimate": 117.2,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:57:46",
+        "final_estimate": 117.18,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 22:20:28",
+        "final_estimate": 118.11,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 01:59:09",
+        "final_estimate": 117.3,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 02:15:14",
+        "final_estimate": 117.42,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 02:16:43",
+        "final_estimate": 117.34,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 12:41:40",
+        "final_estimate": 116.45,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 12:42:35",
+        "final_estimate": 116.43,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 01:33:57",
+        "final_estimate": 116.82,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:49:04",
+        "final_estimate": 117.45,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:53:58",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:54:35",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:55:10",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:55:42",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:56:41",
+        "final_estimate": 117.48,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:26:48",
+        "final_estimate": 116.44,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:34:02",
+        "final_estimate": 116.17,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:35:22",
+        "final_estimate": 116.23,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:36:25",
+        "final_estimate": 116.28,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 16:34:53",
+        "final_estimate": 117.07,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 17:54:41",
+        "final_estimate": 117.38,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-24 00:19:46",
+        "final_estimate": 116.72,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
     }
 ]
-2024-09-20 20:27:25,055 - INFO - Parsed JSON data: [{'date_time': '2024-09-17 16:33:44', 'final_estimate': 118.05, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-17 16:55:00', 'final_estimate': 117.54, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 00:17:37', 'final_estimate': 107.5, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:17:24', 'final_estimate': 106.77, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:22:31', 'final_estimate': 107.13, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:36:10', 'final_estimate': 108.39, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:34:00', 'final_estimate': 107.67, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:36:14', 'final_estimate': 107.81, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:37:21', 'final_estimate': 107.84, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:01:51', 'final_estimate': 118.01, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:05:07', 'final_estimate': 118.03, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:44:27', 'final_estimate': 117.24, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 04:06:16', 'final_estimate': 117.15, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 12:59:47', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:00:25', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:01:51', 'final_estimate': 116.69, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:10:44', 'final_estimate': 108.99, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:17:37', 'final_estimate': 117.19, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}]
-2024-09-20 20:27:25,055 - INFO - Loaded 18 entries from price_data.json
-2024-09-20 20:27:25,055 - INFO - Filtering data from the past 7 days (cutoff: 2024-09-13 20:27:25.055952).
-2024-09-20 20:27:25,055 - INFO - Original date_time string: 2024-09-17 16:33:44
-2024-09-20 20:27:25,057 - INFO - Parsed date_time: 2024-09-17 16:33:44
-2024-09-20 20:27:25,057 - INFO - Entry from 2024-09-17 16:33:44 added to recent_data.
-2024-09-20 20:27:25,057 - INFO - Original date_time string: 2024-09-17 16:55:00
-2024-09-20 20:27:25,057 - INFO - Parsed date_time: 2024-09-17 16:55:00
-2024-09-20 20:27:25,058 - INFO - Entry from 2024-09-17 16:55:00 added to recent_data.
-2024-09-20 20:27:25,058 - INFO - Original date_time string: 2024-09-20 00:17:37
-2024-09-20 20:27:25,058 - INFO - Parsed date_time: 2024-09-20 00:17:37
-2024-09-20 20:27:25,058 - INFO - Entry from 2024-09-20 00:17:37 added to recent_data.
-2024-09-20 20:27:25,058 - INFO - Original date_time string: 2024-09-20 01:17:24
-2024-09-20 20:27:25,058 - INFO - Parsed date_time: 2024-09-20 01:17:24
-2024-09-20 20:27:25,058 - INFO - Entry from 2024-09-20 01:17:24 added to recent_data.
-2024-09-20 20:27:25,058 - INFO - Original date_time string: 2024-09-20 01:22:31
-2024-09-20 20:27:25,058 - INFO - Parsed date_time: 2024-09-20 01:22:31
-2024-09-20 20:27:25,058 - INFO - Entry from 2024-09-20 01:22:31 added to recent_data.
-2024-09-20 20:27:25,058 - INFO - Original date_time string: 2024-09-20 01:36:10
-2024-09-20 20:27:25,058 - INFO - Parsed date_time: 2024-09-20 01:36:10
-2024-09-20 20:27:25,058 - INFO - Entry from 2024-09-20 01:36:10 added to recent_data.
-2024-09-20 20:27:25,058 - INFO - Original date_time string: 2024-09-20 02:34:00
-2024-09-20 20:27:25,058 - INFO - Parsed date_time: 2024-09-20 02:34:00
-2024-09-20 20:27:25,058 - INFO - Entry from 2024-09-20 02:34:00 added to recent_data.
-2024-09-20 20:27:25,059 - INFO - Original date_time string: 2024-09-20 02:36:14
-2024-09-20 20:27:25,059 - INFO - Parsed date_time: 2024-09-20 02:36:14
-2024-09-20 20:27:25,059 - INFO - Entry from 2024-09-20 02:36:14 added to recent_data.
-2024-09-20 20:27:25,059 - INFO - Original date_time string: 2024-09-20 02:37:21
-2024-09-20 20:27:25,059 - INFO - Parsed date_time: 2024-09-20 02:37:21
-2024-09-20 20:27:25,059 - INFO - Entry from 2024-09-20 02:37:21 added to recent_data.
-2024-09-20 20:27:25,059 - INFO - Original date_time string: 2024-09-20 03:01:51
-2024-09-20 20:27:25,059 - INFO - Parsed date_time: 2024-09-20 03:01:51
-2024-09-20 20:27:25,059 - INFO - Entry from 2024-09-20 03:01:51 added to recent_data.
-2024-09-20 20:27:25,059 - INFO - Original date_time string: 2024-09-20 03:05:07
-2024-09-20 20:27:25,059 - INFO - Parsed date_time: 2024-09-20 03:05:07
-2024-09-20 20:27:25,059 - INFO - Entry from 2024-09-20 03:05:07 added to recent_data.
-2024-09-20 20:27:25,059 - INFO - Original date_time string: 2024-09-20 03:44:27
-2024-09-20 20:27:25,059 - INFO - Parsed date_time: 2024-09-20 03:44:27
-2024-09-20 20:27:25,059 - INFO - Entry from 2024-09-20 03:44:27 added to recent_data.
-2024-09-20 20:27:25,059 - INFO - Original date_time string: 2024-09-20 04:06:16
-2024-09-20 20:27:25,060 - INFO - Parsed date_time: 2024-09-20 04:06:16
-2024-09-20 20:27:25,060 - INFO - Entry from 2024-09-20 04:06:16 added to recent_data.
-2024-09-20 20:27:25,060 - INFO - Original date_time string: 2024-09-20 12:59:47
-2024-09-20 20:27:25,060 - INFO - Parsed date_time: 2024-09-20 12:59:47
-2024-09-20 20:27:25,060 - INFO - Entry from 2024-09-20 12:59:47 added to recent_data.
-2024-09-20 20:27:25,060 - INFO - Original date_time string: 2024-09-20 13:00:25
-2024-09-20 20:27:25,060 - INFO - Parsed date_time: 2024-09-20 13:00:25
-2024-09-20 20:27:25,060 - INFO - Entry from 2024-09-20 13:00:25 added to recent_data.
-2024-09-20 20:27:25,060 - INFO - Original date_time string: 2024-09-20 13:01:51
-2024-09-20 20:27:25,060 - INFO - Parsed date_time: 2024-09-20 13:01:51
-2024-09-20 20:27:25,060 - INFO - Entry from 2024-09-20 13:01:51 added to recent_data.
-2024-09-20 20:27:25,060 - INFO - Original date_time string: 2024-09-20 13:10:44
-2024-09-20 20:27:25,060 - INFO - Parsed date_time: 2024-09-20 13:10:44
-2024-09-20 20:27:25,060 - INFO - Entry from 2024-09-20 13:10:44 added to recent_data.
-2024-09-20 20:27:25,060 - INFO - Original date_time string: 2024-09-20 20:17:37
-2024-09-20 20:27:25,061 - INFO - Parsed date_time: 2024-09-20 20:17:37
-2024-09-20 20:27:25,061 - INFO - Entry from 2024-09-20 20:17:37 added to recent_data.
-2024-09-20 20:27:25,061 - INFO - Total entries found within the date range: 18
-2024-09-20 20:27:25,061 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
-2024-09-20 20:27:25,061 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,061 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
-2024-09-20 20:27:25,061 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,061 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,061 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,061 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,061 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,061 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,061 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,061 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,061 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,061 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,061 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,061 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,062 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,062 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,062 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,062 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,062 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,062 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,062 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,062 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,062 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,062 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
-2024-09-20 20:27:25,063 - INFO - Result: Out of tolerance
-2024-09-20 20:27:25,063 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
-2024-09-20 20:27:25,063 - INFO - Result: Within tolerance
-2024-09-20 20:27:25,063 - INFO - Attempt 1: Found 10 entries within 5 tolerance.
-2024-09-20 20:27:25,063 - INFO - Data found within 5 units of the initial product price.
-2024-09-20 20:27:25,063 - INFO - ----------Best Estimates----------
-2024-09-20 20:27:25,064 - INFO - For GBP to XMR via LTC.
-2024-09-20 20:27:25,064 - INFO - Best time to convert is around 13:00PM.
-2024-09-20 20:27:25,064 - INFO - For an average trade price of £116.78.
-2024-09-20 20:27:25,064 - INFO - ----------Trade Insights----------
-2024-09-20 20:27:25,064 - INFO - Initial trade amount - £109.00
-2024-09-20 20:27:25,065 - INFO - Total trade fees - £7.78
+2024-09-24 04:03:13,488 - INFO - Parsed JSON data: [{'date_time': '2024-09-17 16:33:44', 'final_estimate': 118.05, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-17 16:55:00', 'final_estimate': 117.54, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 00:17:37', 'final_estimate': 107.5, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:17:24', 'final_estimate': 106.77, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:22:31', 'final_estimate': 107.13, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:36:10', 'final_estimate': 108.39, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:34:00', 'final_estimate': 107.67, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:36:14', 'final_estimate': 107.81, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:37:21', 'final_estimate': 107.84, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:01:51', 'final_estimate': 118.01, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:05:07', 'final_estimate': 118.03, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:44:27', 'final_estimate': 117.24, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 04:06:16', 'final_estimate': 117.15, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 12:59:47', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:00:25', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:01:51', 'final_estimate': 116.69, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:10:44', 'final_estimate': 108.99, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:17:37', 'final_estimate': 117.19, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:25:35', 'final_estimate': 117.19, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:34:11', 'final_estimate': 117.04, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:36:39', 'final_estimate': 117.2, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:57:46', 'final_estimate': 117.18, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 22:20:28', 'final_estimate': 118.11, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 01:59:09', 'final_estimate': 117.3, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 02:15:14', 'final_estimate': 117.42, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 02:16:43', 'final_estimate': 117.34, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 12:41:40', 'final_estimate': 116.45, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 12:42:35', 'final_estimate': 116.43, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 01:33:57', 'final_estimate': 116.82, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:49:04', 'final_estimate': 117.45, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:53:58', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:54:35', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:55:10', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:55:42', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:56:41', 'final_estimate': 117.48, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:26:48', 'final_estimate': 116.44, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:34:02', 'final_estimate': 116.17, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:35:22', 'final_estimate': 116.23, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:36:25', 'final_estimate': 116.28, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 16:34:53', 'final_estimate': 117.07, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 17:54:41', 'final_estimate': 117.38, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-24 00:19:46', 'final_estimate': 116.72, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}]
+2024-09-24 04:03:13,488 - INFO - Loaded 42 entries from price_data.json
+2024-09-24 04:03:13,488 - INFO - Filtering data from the past 7 days (cutoff: 2024-09-17 04:03:13.488967).
+2024-09-24 04:03:13,488 - INFO - Original date_time string: 2024-09-17 16:33:44
+2024-09-24 04:03:13,490 - INFO - Parsed date_time: 2024-09-17 16:33:44
+2024-09-24 04:03:13,490 - INFO - Entry from 2024-09-17 16:33:44 added to recent_data.
+2024-09-24 04:03:13,490 - INFO - Original date_time string: 2024-09-17 16:55:00
+2024-09-24 04:03:13,490 - INFO - Parsed date_time: 2024-09-17 16:55:00
+2024-09-24 04:03:13,490 - INFO - Entry from 2024-09-17 16:55:00 added to recent_data.
+2024-09-24 04:03:13,490 - INFO - Original date_time string: 2024-09-20 00:17:37
+2024-09-24 04:03:13,491 - INFO - Parsed date_time: 2024-09-20 00:17:37
+2024-09-24 04:03:13,491 - INFO - Entry from 2024-09-20 00:17:37 added to recent_data.
+2024-09-24 04:03:13,491 - INFO - Original date_time string: 2024-09-20 01:17:24
+2024-09-24 04:03:13,491 - INFO - Parsed date_time: 2024-09-20 01:17:24
+2024-09-24 04:03:13,491 - INFO - Entry from 2024-09-20 01:17:24 added to recent_data.
+2024-09-24 04:03:13,491 - INFO - Original date_time string: 2024-09-20 01:22:31
+2024-09-24 04:03:13,491 - INFO - Parsed date_time: 2024-09-20 01:22:31
+2024-09-24 04:03:13,491 - INFO - Entry from 2024-09-20 01:22:31 added to recent_data.
+2024-09-24 04:03:13,491 - INFO - Original date_time string: 2024-09-20 01:36:10
+2024-09-24 04:03:13,491 - INFO - Parsed date_time: 2024-09-20 01:36:10
+2024-09-24 04:03:13,491 - INFO - Entry from 2024-09-20 01:36:10 added to recent_data.
+2024-09-24 04:03:13,491 - INFO - Original date_time string: 2024-09-20 02:34:00
+2024-09-24 04:03:13,491 - INFO - Parsed date_time: 2024-09-20 02:34:00
+2024-09-24 04:03:13,491 - INFO - Entry from 2024-09-20 02:34:00 added to recent_data.
+2024-09-24 04:03:13,491 - INFO - Original date_time string: 2024-09-20 02:36:14
+2024-09-24 04:03:13,491 - INFO - Parsed date_time: 2024-09-20 02:36:14
+2024-09-24 04:03:13,492 - INFO - Entry from 2024-09-20 02:36:14 added to recent_data.
+2024-09-24 04:03:13,492 - INFO - Original date_time string: 2024-09-20 02:37:21
+2024-09-24 04:03:13,492 - INFO - Parsed date_time: 2024-09-20 02:37:21
+2024-09-24 04:03:13,492 - INFO - Entry from 2024-09-20 02:37:21 added to recent_data.
+2024-09-24 04:03:13,492 - INFO - Original date_time string: 2024-09-20 03:01:51
+2024-09-24 04:03:13,492 - INFO - Parsed date_time: 2024-09-20 03:01:51
+2024-09-24 04:03:13,492 - INFO - Entry from 2024-09-20 03:01:51 added to recent_data.
+2024-09-24 04:03:13,492 - INFO - Original date_time string: 2024-09-20 03:05:07
+2024-09-24 04:03:13,492 - INFO - Parsed date_time: 2024-09-20 03:05:07
+2024-09-24 04:03:13,492 - INFO - Entry from 2024-09-20 03:05:07 added to recent_data.
+2024-09-24 04:03:13,492 - INFO - Original date_time string: 2024-09-20 03:44:27
+2024-09-24 04:03:13,492 - INFO - Parsed date_time: 2024-09-20 03:44:27
+2024-09-24 04:03:13,492 - INFO - Entry from 2024-09-20 03:44:27 added to recent_data.
+2024-09-24 04:03:13,492 - INFO - Original date_time string: 2024-09-20 04:06:16
+2024-09-24 04:03:13,492 - INFO - Parsed date_time: 2024-09-20 04:06:16
+2024-09-24 04:03:13,492 - INFO - Entry from 2024-09-20 04:06:16 added to recent_data.
+2024-09-24 04:03:13,493 - INFO - Original date_time string: 2024-09-20 12:59:47
+2024-09-24 04:03:13,493 - INFO - Parsed date_time: 2024-09-20 12:59:47
+2024-09-24 04:03:13,493 - INFO - Entry from 2024-09-20 12:59:47 added to recent_data.
+2024-09-24 04:03:13,493 - INFO - Original date_time string: 2024-09-20 13:00:25
+2024-09-24 04:03:13,493 - INFO - Parsed date_time: 2024-09-20 13:00:25
+2024-09-24 04:03:13,493 - INFO - Entry from 2024-09-20 13:00:25 added to recent_data.
+2024-09-24 04:03:13,493 - INFO - Original date_time string: 2024-09-20 13:01:51
+2024-09-24 04:03:13,493 - INFO - Parsed date_time: 2024-09-20 13:01:51
+2024-09-24 04:03:13,493 - INFO - Entry from 2024-09-20 13:01:51 added to recent_data.
+2024-09-24 04:03:13,493 - INFO - Original date_time string: 2024-09-20 13:10:44
+2024-09-24 04:03:13,493 - INFO - Parsed date_time: 2024-09-20 13:10:44
+2024-09-24 04:03:13,493 - INFO - Entry from 2024-09-20 13:10:44 added to recent_data.
+2024-09-24 04:03:13,493 - INFO - Original date_time string: 2024-09-20 20:17:37
+2024-09-24 04:03:13,493 - INFO - Parsed date_time: 2024-09-20 20:17:37
+2024-09-24 04:03:13,493 - INFO - Entry from 2024-09-20 20:17:37 added to recent_data.
+2024-09-24 04:03:13,493 - INFO - Original date_time string: 2024-09-20 20:25:35
+2024-09-24 04:03:13,494 - INFO - Parsed date_time: 2024-09-20 20:25:35
+2024-09-24 04:03:13,494 - INFO - Entry from 2024-09-20 20:25:35 added to recent_data.
+2024-09-24 04:03:13,494 - INFO - Original date_time string: 2024-09-20 20:34:11
+2024-09-24 04:03:13,494 - INFO - Parsed date_time: 2024-09-20 20:34:11
+2024-09-24 04:03:13,494 - INFO - Entry from 2024-09-20 20:34:11 added to recent_data.
+2024-09-24 04:03:13,494 - INFO - Original date_time string: 2024-09-20 20:36:39
+2024-09-24 04:03:13,494 - INFO - Parsed date_time: 2024-09-20 20:36:39
+2024-09-24 04:03:13,494 - INFO - Entry from 2024-09-20 20:36:39 added to recent_data.
+2024-09-24 04:03:13,494 - INFO - Original date_time string: 2024-09-20 20:57:46
+2024-09-24 04:03:13,494 - INFO - Parsed date_time: 2024-09-20 20:57:46
+2024-09-24 04:03:13,494 - INFO - Entry from 2024-09-20 20:57:46 added to recent_data.
+2024-09-24 04:03:13,494 - INFO - Original date_time string: 2024-09-20 22:20:28
+2024-09-24 04:03:13,494 - INFO - Parsed date_time: 2024-09-20 22:20:28
+2024-09-24 04:03:13,494 - INFO - Entry from 2024-09-20 22:20:28 added to recent_data.
+2024-09-24 04:03:13,494 - INFO - Original date_time string: 2024-09-21 01:59:09
+2024-09-24 04:03:13,494 - INFO - Parsed date_time: 2024-09-21 01:59:09
+2024-09-24 04:03:13,494 - INFO - Entry from 2024-09-21 01:59:09 added to recent_data.
+2024-09-24 04:03:13,495 - INFO - Original date_time string: 2024-09-21 02:15:14
+2024-09-24 04:03:13,495 - INFO - Parsed date_time: 2024-09-21 02:15:14
+2024-09-24 04:03:13,495 - INFO - Entry from 2024-09-21 02:15:14 added to recent_data.
+2024-09-24 04:03:13,495 - INFO - Original date_time string: 2024-09-21 02:16:43
+2024-09-24 04:03:13,495 - INFO - Parsed date_time: 2024-09-21 02:16:43
+2024-09-24 04:03:13,495 - INFO - Entry from 2024-09-21 02:16:43 added to recent_data.
+2024-09-24 04:03:13,495 - INFO - Original date_time string: 2024-09-21 12:41:40
+2024-09-24 04:03:13,495 - INFO - Parsed date_time: 2024-09-21 12:41:40
+2024-09-24 04:03:13,495 - INFO - Entry from 2024-09-21 12:41:40 added to recent_data.
+2024-09-24 04:03:13,495 - INFO - Original date_time string: 2024-09-21 12:42:35
+2024-09-24 04:03:13,495 - INFO - Parsed date_time: 2024-09-21 12:42:35
+2024-09-24 04:03:13,495 - INFO - Entry from 2024-09-21 12:42:35 added to recent_data.
+2024-09-24 04:03:13,495 - INFO - Original date_time string: 2024-09-23 01:33:57
+2024-09-24 04:03:13,495 - INFO - Parsed date_time: 2024-09-23 01:33:57
+2024-09-24 04:03:13,495 - INFO - Entry from 2024-09-23 01:33:57 added to recent_data.
+2024-09-24 04:03:13,496 - INFO - Original date_time string: 2024-09-23 05:49:04
+2024-09-24 04:03:13,496 - INFO - Parsed date_time: 2024-09-23 05:49:04
+2024-09-24 04:03:13,496 - INFO - Entry from 2024-09-23 05:49:04 added to recent_data.
+2024-09-24 04:03:13,496 - INFO - Original date_time string: 2024-09-23 05:53:58
+2024-09-24 04:03:13,496 - INFO - Parsed date_time: 2024-09-23 05:53:58
+2024-09-24 04:03:13,496 - INFO - Entry from 2024-09-23 05:53:58 added to recent_data.
+2024-09-24 04:03:13,496 - INFO - Original date_time string: 2024-09-23 05:54:35
+2024-09-24 04:03:13,496 - INFO - Parsed date_time: 2024-09-23 05:54:35
+2024-09-24 04:03:13,496 - INFO - Entry from 2024-09-23 05:54:35 added to recent_data.
+2024-09-24 04:03:13,496 - INFO - Original date_time string: 2024-09-23 05:55:10
+2024-09-24 04:03:13,496 - INFO - Parsed date_time: 2024-09-23 05:55:10
+2024-09-24 04:03:13,496 - INFO - Entry from 2024-09-23 05:55:10 added to recent_data.
+2024-09-24 04:03:13,496 - INFO - Original date_time string: 2024-09-23 05:55:42
+2024-09-24 04:03:13,496 - INFO - Parsed date_time: 2024-09-23 05:55:42
+2024-09-24 04:03:13,496 - INFO - Entry from 2024-09-23 05:55:42 added to recent_data.
+2024-09-24 04:03:13,496 - INFO - Original date_time string: 2024-09-23 05:56:41
+2024-09-24 04:03:13,496 - INFO - Parsed date_time: 2024-09-23 05:56:41
+2024-09-24 04:03:13,497 - INFO - Entry from 2024-09-23 05:56:41 added to recent_data.
+2024-09-24 04:03:13,497 - INFO - Original date_time string: 2024-09-23 15:26:48
+2024-09-24 04:03:13,497 - INFO - Parsed date_time: 2024-09-23 15:26:48
+2024-09-24 04:03:13,497 - INFO - Entry from 2024-09-23 15:26:48 added to recent_data.
+2024-09-24 04:03:13,497 - INFO - Original date_time string: 2024-09-23 15:34:02
+2024-09-24 04:03:13,497 - INFO - Parsed date_time: 2024-09-23 15:34:02
+2024-09-24 04:03:13,497 - INFO - Entry from 2024-09-23 15:34:02 added to recent_data.
+2024-09-24 04:03:13,497 - INFO - Original date_time string: 2024-09-23 15:35:22
+2024-09-24 04:03:13,497 - INFO - Parsed date_time: 2024-09-23 15:35:22
+2024-09-24 04:03:13,497 - INFO - Entry from 2024-09-23 15:35:22 added to recent_data.
+2024-09-24 04:03:13,497 - INFO - Original date_time string: 2024-09-23 15:36:25
+2024-09-24 04:03:13,497 - INFO - Parsed date_time: 2024-09-23 15:36:25
+2024-09-24 04:03:13,497 - INFO - Entry from 2024-09-23 15:36:25 added to recent_data.
+2024-09-24 04:03:13,497 - INFO - Original date_time string: 2024-09-23 16:34:53
+2024-09-24 04:03:13,497 - INFO - Parsed date_time: 2024-09-23 16:34:53
+2024-09-24 04:03:13,497 - INFO - Entry from 2024-09-23 16:34:53 added to recent_data.
+2024-09-24 04:03:13,498 - INFO - Original date_time string: 2024-09-23 17:54:41
+2024-09-24 04:03:13,498 - INFO - Parsed date_time: 2024-09-23 17:54:41
+2024-09-24 04:03:13,498 - INFO - Entry from 2024-09-23 17:54:41 added to recent_data.
+2024-09-24 04:03:13,498 - INFO - Original date_time string: 2024-09-24 00:19:46
+2024-09-24 04:03:13,498 - INFO - Parsed date_time: 2024-09-24 00:19:46
+2024-09-24 04:03:13,498 - INFO - Entry from 2024-09-24 00:19:46 added to recent_data.
+2024-09-24 04:03:13,498 - INFO - Total entries found within the date range: 42
+2024-09-24 04:03:13,498 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
+2024-09-24 04:03:13,498 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,498 - INFO - Checking if value 110.0 is within 5 units of value 109.0. Difference: 1.0
+2024-09-24 04:03:13,498 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,498 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,498 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,498 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,498 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,498 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,498 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,499 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,499 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,499 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,499 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,499 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,499 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,499 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,499 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,499 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,499 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 100.0 is within 5 units of value 109.0. Difference: 9.0
+2024-09-24 04:03:13,500 - INFO - Result: Out of tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,500 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,500 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,501 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,501 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Checking if value 109.0 is within 5 units of value 109.0. Difference: 0.0
+2024-09-24 04:03:13,502 - INFO - Result: Within tolerance
+2024-09-24 04:03:13,502 - INFO - Attempt 1: Found 34 entries within 5 tolerance.
+2024-09-24 04:03:13,502 - INFO - Data found within 5 units of the initial product price.
+2024-09-24 04:03:13,503 - INFO - ----------Best Estimates----------
+2024-09-24 04:03:13,504 - INFO - For GBP to XMR via LTC.
+2024-09-24 04:03:13,504 - INFO - Best time to convert is around 15:30PM.
+2024-09-24 04:03:13,504 - INFO - For an average trade price of £116.23.
+2024-09-24 04:03:13,504 - INFO - ----------Trade Insights----------
+2024-09-24 04:03:13,504 - INFO - Initial trade amount - £109.00
+2024-09-24 04:03:13,504 - INFO - Total trade fees - £7.23
