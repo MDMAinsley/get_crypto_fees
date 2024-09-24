@@ -687,13 +687,13 @@ def main():
     global item_purchase_price
     global run_headless
     global xmr_fees_total
+    if "--version" in sys.argv:
+        print(f"v{__version__}")
+        return
     if check_internet():
         print_and_log("Connection active.", logging.info)
     else:
         print_and_log("Offline Mode", logging.info)
-    if "--version" in sys.argv:
-        print(f"v{__version__}")
-        return
     print_and_log(f"Running application version v{__version__}", logging.info)
     try:
         # Create or load settings file

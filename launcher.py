@@ -2,7 +2,6 @@ import os
 import subprocess
 import sys
 import requests
-import urllib3.exceptions
 
 
 # Function to get the latest version tag from GitHub API
