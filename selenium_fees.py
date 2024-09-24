@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 settings_file = 'settings.json'
 
