@@ -17,7 +17,7 @@ import json
 import os
 import logging
 
-__version__ = "1.0.6"
+__version__ = "1.1.0"
 
 settings_file = 'settings.json'
 
@@ -687,6 +687,10 @@ def main():
     global item_purchase_price
     global run_headless
     global xmr_fees_total
+    if check_internet():
+        print_and_log("Connection active.", logging.info)
+    else:
+        print_and_log("Offline Mode", logging.info)
     if "--version" in sys.argv:
         print(f"v{__version__}")
         return

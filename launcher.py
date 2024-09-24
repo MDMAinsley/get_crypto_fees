@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 import requests
+import urllib3.exceptions
 
 
 # Function to get the latest version tag from GitHub API
@@ -46,7 +47,9 @@ def main():
         else:
             print("LAUNCHER: No update available. Starting application...")
             subprocess.run([app_exe_path], check=True)
-
+    except requests.ConnectionError:
+        print("LAUNCHER: No Internet Connection. Starting application in Offline Mode...")
+        subprocess.run([app_exe_path], check=True)
     except Exception as e:
         print(f"LAUNCHER: Error: {e}")
 
