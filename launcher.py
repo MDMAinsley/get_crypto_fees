@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 import requests
+import shutil
 
 
 # Function to get the latest version tag from GitHub API
@@ -29,6 +30,21 @@ def check_for_update(current_version, latest_version_url):
     return latest_version_normalized != current_version_normalized  # Compare normalized versions
 
 
+# Function to replace updater if needed
+def replace_updater(app_dir):
+    try:
+        new_updater_path = os.path.join(app_dir, "GF_Updater.new.exe")
+        old_updater_path = os.path.join(app_dir, "GF_Updater.exe")
+
+        if os.path.exists(new_updater_path):
+            # Replace the old updater with the new version
+            os.remove(old_updater_path)
+            shutil.move(new_updater_path, old_updater_path)
+            print("LAUNCHER: Updater successfully replaced.")
+    except Exception as e:
+        print(f"LAUNCHER: Error replacing updater: {e}")
+
+
 def main():
     app_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
     app_exe_path = os.path.join(app_dir, "GF_Data.exe")
@@ -39,6 +55,9 @@ def main():
     updater_path = os.path.join(app_dir, "GF_Updater.exe")
 
     try:
+        # Replace updater if needed
+        replace_updater(app_dir)
+
         # Check for update and run updater if needed
         if check_for_update(current_version, latest_version_url):
             print("LAUNCHER: Update available. Running updater...")

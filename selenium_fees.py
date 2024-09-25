@@ -17,15 +17,12 @@ import json
 import os
 import logging
 
-__version__ = "1.1.1"
-
-settings_file = 'settings.json'
+__version__ = "1.2.1"
 
 # Variables setup
-item_purchase_price = 109  # Wanted item's purchase price
-run_headless = True  # Disable to see the browser
-xmr_fees_total = 0.5  # Change when needed
+settings_file = 'settings.json'
 cookies_element_id = "L2AGLb"  # Change when needed
+
 # Constants
 load_dotenv()  # Load environment variables from .env file
 RAW_GITHUB_URL = 'https://raw.githubusercontent.com/MDMAinsley/get_crypto_fees/main/price_data.json'
@@ -58,7 +55,7 @@ def setup_web_driver(headless):
 
 
 # Function to handle different website loading on current webdriver instance
-def load_site(driver, index, xmr_trade_value, fiat_currency, initial_crypto, final_crypto):
+def load_site(driver, index, xmr_trade_value, fiat_currency, initial_crypto, final_crypto, item_purchase_price):
     if index == 0:
         driver.get(f"https://www.google.com/search?q={item_purchase_price}{fiat_currency}+to+{final_crypto}")
     elif index == 1:
@@ -137,7 +134,7 @@ def select_and_parse_gbp_value(wait, retries=5):
 
 
 # Function to calculate the final price from all the scraped values
-def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance):
+def calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance, xmr_fees_total):
     gross_trade_price = one_ltc_to_gbp_value * xmr_to_ltc_rate
     logging.debug(f"Gross trade price: £{gross_trade_price}")
     # Round to the nearest penny
@@ -684,9 +681,6 @@ def sync_data(filename='price_data.json'):
 
 # Main program function
 def main():
-    global item_purchase_price
-    global run_headless
-    global xmr_fees_total
     if "--version" in sys.argv:
         print(f"v{__version__}")
         return
@@ -751,7 +745,7 @@ def main():
             bar()
             bar.text = tasks[current_task]
             # Search current XMR value of desired total
-            load_site(driver, 0, False, fiat_currency, initial_crypto, final_crypto)
+            load_site(driver, 0, False, fiat_currency, initial_crypto, final_crypto, item_purchase_price)
             current_task += 1
             bar()
             bar.text = tasks[current_task]
@@ -766,7 +760,7 @@ def main():
             bar()
             bar.text = tasks[current_task]
             # Search LTC value of XMR trade price
-            load_site(driver, 1, xmr_trade_value, fiat_currency, initial_crypto, final_crypto)
+            load_site(driver, 1, xmr_trade_value, fiat_currency, initial_crypto, final_crypto, item_purchase_price)
             current_task += 1
             bar()
             bar.text = tasks[current_task]
@@ -776,7 +770,7 @@ def main():
             bar()
             bar.text = tasks[current_task]
             # Get CHANGENOW's LTC/GBP conversion price
-            load_site(driver, 2, False, fiat_currency, initial_crypto, final_crypto)
+            load_site(driver, 2, False, fiat_currency, initial_crypto, final_crypto, item_purchase_price)
             current_task += 1
             bar()
             bar.text = tasks[current_task]
@@ -786,7 +780,8 @@ def main():
             bar()
             bar.text = tasks[current_task]
             # Calculate final estimated price with fees
-            final_estimate = calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance)
+            final_estimate = calculate_final_price(one_ltc_to_gbp_value, xmr_to_ltc_rate, current_balance,
+                                                   xmr_fees_total)
             bar()
             # Close the driver instance
             driver.close()
