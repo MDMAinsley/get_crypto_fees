@@ -1,67 +1,90 @@
 import os
 import shutil
-import sys
-import requests
-from zipfile import ZipFile
 import subprocess
+import sys
+import time
 
 
-def download_latest_version(download_url, download_path):
-    response = requests.get(download_url, stream=True)
-    response.raise_for_status()
-    with open(download_path, 'wb') as out_file:
-        shutil.copyfileobj(response.raw, out_file)
+def replace_files(extract_folder, app_dir):
+    # Replace GF_Launcher and GF_Data
+    new_launcher_path = os.path.join(extract_folder, "GF_Launcher.exe")
+    new_data_path = os.path.join(extract_folder, "GF_Data.exe")
+
+    current_launcher_path = os.path.join(app_dir, "GF_Launcher.exe")
+    current_data_path = os.path.join(app_dir, "GF_Data.exe")
+
+    if os.path.exists(new_launcher_path):
+        shutil.move(new_launcher_path, current_launcher_path)
+        # print("UPDATER: GF_Launcher.exe replaced.")
+
+    if os.path.exists(new_data_path):
+        shutil.move(new_data_path, current_data_path)
+        # print("UPDATER: GF_Data.exe replaced.")
 
 
-def extract_zip(zip_path, extract_to):
-    with ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall(extract_to)
+def cleanup(extract_folder, zip_file):
+    try:
+        # Delete the extracted folder and zip file
+        if os.path.exists(extract_folder):
+            shutil.rmtree(extract_folder)
+            # print(f"UPDATER: Deleted extracted folder {extract_folder}.")
+        if os.path.exists(zip_file):
+            os.remove(zip_file)
+    except Exception as e:
+        print(f"Error during update cleanup: {e}")
+
+
+# Function to clear the console on any os
+def clear_console():
+    # For Windows
+    if os.name == 'nt':
+        os.system('cls')
+    # For Linux/macOS
+    else:
+        os.system('clear')
 
 
 def main():
-    owner = "MDMAinsley"
-    repo = "get_crypto_fees"
     app_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-    zip_download_path = os.path.join(app_dir, "latest_version.zip")
-    url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
+    extract_folder = sys.argv[1]  # Passed from Launcher
+    zip_file = os.path.join(app_dir, os.path.basename(extract_folder).replace("update_", "v") + ".zip")
+
+    max_retries = 5
+    retry_delay = 5  # seconds
 
     try:
-        print("UPDATER: Fetching latest release info from GitHub...")
-        response = requests.get(url)
-        response.raise_for_status()
-        latest_release = response.json()
-        latest_version = latest_release['tag_name']
+        for attempt in range(max_retries):
+            try:
+                # Replace launcher and data files
+                replace_files(extract_folder, app_dir)
 
-        # Find the zip asset to download
-        zip_asset_name = f"v{latest_version}.zip"
-        download_url = None
+                # Clean up the update folder and zip file
+                cleanup(extract_folder, zip_file)
 
-        for asset in latest_release['assets']:
-            if asset['name'] == zip_asset_name:
-                download_url = asset['browser_download_url']
-                break
+                # Restart the updated application
+                new_launcher_path = os.path.join(app_dir, "GF_Launcher.exe")
+                subprocess.Popen([new_launcher_path])
 
-        if not download_url:
-            raise Exception(f"UPDATER: No zip asset matching {zip_asset_name} found.")
+                print("Updated successfully.")
+                time.sleep(1)
+                clear_console()
+                sys.exit(0)  # Exit updater after successful update
 
-        print(f"UPDATER: Downloading latest version {latest_version}...")
-        download_latest_version(download_url, zip_download_path)
-        print("UPDATER: Download complete.")
+            except PermissionError as e:
+                if e.winerror == 32:  # WinErr32: File in use or syncing
+                    print(f"Possible OneDrive/Cloud Service sync in progress,"
+                          f" waiting and retrying... ({attempt + 1}/{max_retries})")
+                    time.sleep(retry_delay)  # Wait before retrying
+                else:
+                    raise  # Rethrow other permission errors
 
-        print("UPDATER: Extracting new version files...")
-        extract_zip(zip_download_path, app_dir)
-        print("UPDATER: Extraction complete.")
-
-        # Remove the zip file after extraction
-        os.remove(zip_download_path)
-
-        # Relaunch the updated launcher to handle updater replacement and app start
-        print("UPDATER: Relaunching launcher to complete update...")
-        launcher_path = os.path.join(app_dir, "GF_Launcher.exe")
-        subprocess.run([launcher_path], check=True)
+        # After retrying max_retries times, give up and inform the user
+        print("Error: Wait for syncing to finish and run again.")
+        sys.exit(1)
 
     except Exception as e:
-        print(f"UPDATER: Error during update: {e}")
+        print(f"Error during update: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

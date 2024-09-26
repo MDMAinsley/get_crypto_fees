@@ -1,3 +1,0 @@
-2024-09-24 04:19:04,446 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
-2024-09-24 04:19:04,588 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
-2024-09-24 04:19:04,593 - INFO - Connection active.
