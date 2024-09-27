@@ -104,8 +104,10 @@ def main():
             response.raise_for_status()
             latest_release = response.json()
             release_description = latest_release.get('body', 'No description available.')
-            print(f"Update v{latest_version} is available.")
-            print(f"Changelog: {release_description}")
+            print(f"Update v{latest_version} is available...")
+            print("-------------------------------------------")
+            print(f"{release_description}")
+            print()
             if specific_input(f"Update to v{latest_version}? (y/n): ",
                               ["y", "Y", "n", "N"]).lower() == "y":
                 print("Starting Update...")

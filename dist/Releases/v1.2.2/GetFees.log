@@ -1,0 +1,1230 @@
+2024-09-27 02:19:28,654 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-27 02:19:28,805 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-27 02:19:28,808 - INFO - Connection active.
+2024-09-27 02:19:28,808 - INFO - Running application version v1.2.3
+2024-09-27 02:19:28,809 - INFO - File not found. Created new default settings file.
+2024-09-27 02:19:28,820 - INFO - Successfully loaded settings file.
+2024-09-27 02:19:30,877 - INFO - Starting analysis with parameters: initial_product_price=0.0, fiat_currency=gbp, initial_crypto=ltc, final_crypto=xmr, days_to_search=7
+2024-09-27 02:19:30,878 - DEBUG - Starting new HTTPS connection (1): www.google.com:443
+2024-09-27 02:19:30,999 - DEBUG - https://www.google.com:443 "GET / HTTP/11" 200 None
+2024-09-27 02:19:31,002 - INFO - Attempting to download shared data from GitHub...
+2024-09-27 02:19:31,003 - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+2024-09-27 02:19:31,288 - DEBUG - https://raw.githubusercontent.com:443 "GET /MDMAinsley/get_crypto_fees/main/price_data.json HTTP/11" 200 599
+2024-09-27 02:19:31,289 - INFO - Received response from GitHub.
+2024-09-27 02:19:31,289 - INFO - Downloaded shared data from GitHub.
+2024-09-27 02:19:31,292 - INFO - Attempting to upload merged data to GitHub...
+2024-09-27 02:19:31,293 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-27 02:19:31,555 - DEBUG - https://api.github.com:443 "GET /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
+2024-09-27 02:19:31,556 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2024-09-27 02:19:32,093 - DEBUG - https://api.github.com:443 "PUT /repos/MDMAinsley/get_crypto_fees/contents/price_data.json HTTP/11" 200 None
+2024-09-27 02:19:32,093 - INFO - Uploaded local data to GitHub.
+2024-09-27 02:19:32,094 - INFO - Raw JSON content: [
+    {
+        "date_time": "2024-09-17 16:33:44",
+        "final_estimate": 118.05,
+        "initial_product_price": 110.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-17 16:55:00",
+        "final_estimate": 117.54,
+        "initial_product_price": 110.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 00:17:37",
+        "final_estimate": 107.5,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 01:17:24",
+        "final_estimate": 106.77,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 01:22:31",
+        "final_estimate": 107.13,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 01:36:10",
+        "final_estimate": 108.39,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 02:34:00",
+        "final_estimate": 107.67,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 02:36:14",
+        "final_estimate": 107.81,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "btc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 02:37:21",
+        "final_estimate": 107.84,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "btc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 03:01:51",
+        "final_estimate": 118.01,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 03:05:07",
+        "final_estimate": 118.03,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 03:44:27",
+        "final_estimate": 117.24,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 04:06:16",
+        "final_estimate": 117.15,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 12:59:47",
+        "final_estimate": 116.86,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 13:00:25",
+        "final_estimate": 116.86,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 13:01:51",
+        "final_estimate": 116.69,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 13:10:44",
+        "final_estimate": 108.99,
+        "initial_product_price": 100.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "btc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:17:37",
+        "final_estimate": 117.19,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:25:35",
+        "final_estimate": 117.19,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:34:11",
+        "final_estimate": 117.04,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:36:39",
+        "final_estimate": 117.2,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 20:57:46",
+        "final_estimate": 117.18,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-20 22:20:28",
+        "final_estimate": 118.11,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 01:59:09",
+        "final_estimate": 117.3,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 02:15:14",
+        "final_estimate": 117.42,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 02:16:43",
+        "final_estimate": 117.34,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 12:41:40",
+        "final_estimate": 116.45,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-21 12:42:35",
+        "final_estimate": 116.43,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 01:33:57",
+        "final_estimate": 116.82,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:49:04",
+        "final_estimate": 117.45,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:53:58",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:54:35",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:55:10",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:55:42",
+        "final_estimate": 117.49,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 05:56:41",
+        "final_estimate": 117.48,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:26:48",
+        "final_estimate": 116.44,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:34:02",
+        "final_estimate": 116.17,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:35:22",
+        "final_estimate": 116.23,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 15:36:25",
+        "final_estimate": 116.28,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 16:34:53",
+        "final_estimate": 117.07,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-23 17:54:41",
+        "final_estimate": 117.38,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    },
+    {
+        "date_time": "2024-09-24 00:19:46",
+        "final_estimate": 116.72,
+        "initial_product_price": 109.0,
+        "fiat_currency": "gbp",
+        "initial_crypto": "ltc",
+        "final_crypto": "xmr"
+    }
+]
+2024-09-27 02:19:32,094 - INFO - Parsed JSON data: [{'date_time': '2024-09-17 16:33:44', 'final_estimate': 118.05, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-17 16:55:00', 'final_estimate': 117.54, 'initial_product_price': 110.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 00:17:37', 'final_estimate': 107.5, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:17:24', 'final_estimate': 106.77, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:22:31', 'final_estimate': 107.13, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 01:36:10', 'final_estimate': 108.39, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:34:00', 'final_estimate': 107.67, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:36:14', 'final_estimate': 107.81, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 02:37:21', 'final_estimate': 107.84, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:01:51', 'final_estimate': 118.01, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:05:07', 'final_estimate': 118.03, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 03:44:27', 'final_estimate': 117.24, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 04:06:16', 'final_estimate': 117.15, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 12:59:47', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:00:25', 'final_estimate': 116.86, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:01:51', 'final_estimate': 116.69, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 13:10:44', 'final_estimate': 108.99, 'initial_product_price': 100.0, 'fiat_currency': 'gbp', 'initial_crypto': 'btc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:17:37', 'final_estimate': 117.19, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:25:35', 'final_estimate': 117.19, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:34:11', 'final_estimate': 117.04, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:36:39', 'final_estimate': 117.2, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 20:57:46', 'final_estimate': 117.18, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-20 22:20:28', 'final_estimate': 118.11, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 01:59:09', 'final_estimate': 117.3, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 02:15:14', 'final_estimate': 117.42, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 02:16:43', 'final_estimate': 117.34, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 12:41:40', 'final_estimate': 116.45, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-21 12:42:35', 'final_estimate': 116.43, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 01:33:57', 'final_estimate': 116.82, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:49:04', 'final_estimate': 117.45, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:53:58', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:54:35', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:55:10', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:55:42', 'final_estimate': 117.49, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 05:56:41', 'final_estimate': 117.48, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:26:48', 'final_estimate': 116.44, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:34:02', 'final_estimate': 116.17, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:35:22', 'final_estimate': 116.23, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 15:36:25', 'final_estimate': 116.28, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 16:34:53', 'final_estimate': 117.07, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-23 17:54:41', 'final_estimate': 117.38, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}, {'date_time': '2024-09-24 00:19:46', 'final_estimate': 116.72, 'initial_product_price': 109.0, 'fiat_currency': 'gbp', 'initial_crypto': 'ltc', 'final_crypto': 'xmr'}]
+2024-09-27 02:19:32,094 - INFO - Loaded 42 entries from price_data.json
+2024-09-27 02:19:32,094 - INFO - Filtering data from the past 7 days (cutoff: 2024-09-20 02:19:32.094895).
+2024-09-27 02:19:32,095 - INFO - Original date_time string: 2024-09-17 16:33:44
+2024-09-27 02:19:32,096 - INFO - Parsed date_time: 2024-09-17 16:33:44
+2024-09-27 02:19:32,096 - INFO - Entry from 2024-09-17 16:33:44 is older than 2024-09-20 02:19:32.094895, not added.
+2024-09-27 02:19:32,097 - INFO - Original date_time string: 2024-09-17 16:55:00
+2024-09-27 02:19:32,097 - INFO - Parsed date_time: 2024-09-17 16:55:00
+2024-09-27 02:19:32,097 - INFO - Entry from 2024-09-17 16:55:00 is older than 2024-09-20 02:19:32.094895, not added.
+2024-09-27 02:19:32,097 - INFO - Original date_time string: 2024-09-20 00:17:37
+2024-09-27 02:19:32,097 - INFO - Parsed date_time: 2024-09-20 00:17:37
+2024-09-27 02:19:32,097 - INFO - Entry from 2024-09-20 00:17:37 is older than 2024-09-20 02:19:32.094895, not added.
+2024-09-27 02:19:32,097 - INFO - Original date_time string: 2024-09-20 01:17:24
+2024-09-27 02:19:32,097 - INFO - Parsed date_time: 2024-09-20 01:17:24
+2024-09-27 02:19:32,097 - INFO - Entry from 2024-09-20 01:17:24 is older than 2024-09-20 02:19:32.094895, not added.
+2024-09-27 02:19:32,097 - INFO - Original date_time string: 2024-09-20 01:22:31
+2024-09-27 02:19:32,097 - INFO - Parsed date_time: 2024-09-20 01:22:31
+2024-09-27 02:19:32,097 - INFO - Entry from 2024-09-20 01:22:31 is older than 2024-09-20 02:19:32.094895, not added.
+2024-09-27 02:19:32,097 - INFO - Original date_time string: 2024-09-20 01:36:10
+2024-09-27 02:19:32,097 - INFO - Parsed date_time: 2024-09-20 01:36:10
+2024-09-27 02:19:32,097 - INFO - Entry from 2024-09-20 01:36:10 is older than 2024-09-20 02:19:32.094895, not added.
+2024-09-27 02:19:32,098 - INFO - Original date_time string: 2024-09-20 02:34:00
+2024-09-27 02:19:32,098 - INFO - Parsed date_time: 2024-09-20 02:34:00
+2024-09-27 02:19:32,098 - INFO - Entry from 2024-09-20 02:34:00 added to recent_data.
+2024-09-27 02:19:32,098 - INFO - Original date_time string: 2024-09-20 02:36:14
+2024-09-27 02:19:32,098 - INFO - Parsed date_time: 2024-09-20 02:36:14
+2024-09-27 02:19:32,098 - INFO - Entry from 2024-09-20 02:36:14 added to recent_data.
+2024-09-27 02:19:32,098 - INFO - Original date_time string: 2024-09-20 02:37:21
+2024-09-27 02:19:32,098 - INFO - Parsed date_time: 2024-09-20 02:37:21
+2024-09-27 02:19:32,098 - INFO - Entry from 2024-09-20 02:37:21 added to recent_data.
+2024-09-27 02:19:32,098 - INFO - Original date_time string: 2024-09-20 03:01:51
+2024-09-27 02:19:32,098 - INFO - Parsed date_time: 2024-09-20 03:01:51
+2024-09-27 02:19:32,098 - INFO - Entry from 2024-09-20 03:01:51 added to recent_data.
+2024-09-27 02:19:32,098 - INFO - Original date_time string: 2024-09-20 03:05:07
+2024-09-27 02:19:32,099 - INFO - Parsed date_time: 2024-09-20 03:05:07
+2024-09-27 02:19:32,099 - INFO - Entry from 2024-09-20 03:05:07 added to recent_data.
+2024-09-27 02:19:32,099 - INFO - Original date_time string: 2024-09-20 03:44:27
+2024-09-27 02:19:32,099 - INFO - Parsed date_time: 2024-09-20 03:44:27
+2024-09-27 02:19:32,099 - INFO - Entry from 2024-09-20 03:44:27 added to recent_data.
+2024-09-27 02:19:32,099 - INFO - Original date_time string: 2024-09-20 04:06:16
+2024-09-27 02:19:32,099 - INFO - Parsed date_time: 2024-09-20 04:06:16
+2024-09-27 02:19:32,099 - INFO - Entry from 2024-09-20 04:06:16 added to recent_data.
+2024-09-27 02:19:32,099 - INFO - Original date_time string: 2024-09-20 12:59:47
+2024-09-27 02:19:32,099 - INFO - Parsed date_time: 2024-09-20 12:59:47
+2024-09-27 02:19:32,099 - INFO - Entry from 2024-09-20 12:59:47 added to recent_data.
+2024-09-27 02:19:32,099 - INFO - Original date_time string: 2024-09-20 13:00:25
+2024-09-27 02:19:32,099 - INFO - Parsed date_time: 2024-09-20 13:00:25
+2024-09-27 02:19:32,099 - INFO - Entry from 2024-09-20 13:00:25 added to recent_data.
+2024-09-27 02:19:32,099 - INFO - Original date_time string: 2024-09-20 13:01:51
+2024-09-27 02:19:32,099 - INFO - Parsed date_time: 2024-09-20 13:01:51
+2024-09-27 02:19:32,100 - INFO - Entry from 2024-09-20 13:01:51 added to recent_data.
+2024-09-27 02:19:32,100 - INFO - Original date_time string: 2024-09-20 13:10:44
+2024-09-27 02:19:32,100 - INFO - Parsed date_time: 2024-09-20 13:10:44
+2024-09-27 02:19:32,100 - INFO - Entry from 2024-09-20 13:10:44 added to recent_data.
+2024-09-27 02:19:32,100 - INFO - Original date_time string: 2024-09-20 20:17:37
+2024-09-27 02:19:32,100 - INFO - Parsed date_time: 2024-09-20 20:17:37
+2024-09-27 02:19:32,100 - INFO - Entry from 2024-09-20 20:17:37 added to recent_data.
+2024-09-27 02:19:32,100 - INFO - Original date_time string: 2024-09-20 20:25:35
+2024-09-27 02:19:32,100 - INFO - Parsed date_time: 2024-09-20 20:25:35
+2024-09-27 02:19:32,100 - INFO - Entry from 2024-09-20 20:25:35 added to recent_data.
+2024-09-27 02:19:32,100 - INFO - Original date_time string: 2024-09-20 20:34:11
+2024-09-27 02:19:32,100 - INFO - Parsed date_time: 2024-09-20 20:34:11
+2024-09-27 02:19:32,100 - INFO - Entry from 2024-09-20 20:34:11 added to recent_data.
+2024-09-27 02:19:32,100 - INFO - Original date_time string: 2024-09-20 20:36:39
+2024-09-27 02:19:32,100 - INFO - Parsed date_time: 2024-09-20 20:36:39
+2024-09-27 02:19:32,100 - INFO - Entry from 2024-09-20 20:36:39 added to recent_data.
+2024-09-27 02:19:32,100 - INFO - Original date_time string: 2024-09-20 20:57:46
+2024-09-27 02:19:32,101 - INFO - Parsed date_time: 2024-09-20 20:57:46
+2024-09-27 02:19:32,101 - INFO - Entry from 2024-09-20 20:57:46 added to recent_data.
+2024-09-27 02:19:32,101 - INFO - Original date_time string: 2024-09-20 22:20:28
+2024-09-27 02:19:32,101 - INFO - Parsed date_time: 2024-09-20 22:20:28
+2024-09-27 02:19:32,101 - INFO - Entry from 2024-09-20 22:20:28 added to recent_data.
+2024-09-27 02:19:32,101 - INFO - Original date_time string: 2024-09-21 01:59:09
+2024-09-27 02:19:32,101 - INFO - Parsed date_time: 2024-09-21 01:59:09
+2024-09-27 02:19:32,101 - INFO - Entry from 2024-09-21 01:59:09 added to recent_data.
+2024-09-27 02:19:32,101 - INFO - Original date_time string: 2024-09-21 02:15:14
+2024-09-27 02:19:32,101 - INFO - Parsed date_time: 2024-09-21 02:15:14
+2024-09-27 02:19:32,101 - INFO - Entry from 2024-09-21 02:15:14 added to recent_data.
+2024-09-27 02:19:32,101 - INFO - Original date_time string: 2024-09-21 02:16:43
+2024-09-27 02:19:32,101 - INFO - Parsed date_time: 2024-09-21 02:16:43
+2024-09-27 02:19:32,101 - INFO - Entry from 2024-09-21 02:16:43 added to recent_data.
+2024-09-27 02:19:32,101 - INFO - Original date_time string: 2024-09-21 12:41:40
+2024-09-27 02:19:32,101 - INFO - Parsed date_time: 2024-09-21 12:41:40
+2024-09-27 02:19:32,101 - INFO - Entry from 2024-09-21 12:41:40 added to recent_data.
+2024-09-27 02:19:32,102 - INFO - Original date_time string: 2024-09-21 12:42:35
+2024-09-27 02:19:32,102 - INFO - Parsed date_time: 2024-09-21 12:42:35
+2024-09-27 02:19:32,102 - INFO - Entry from 2024-09-21 12:42:35 added to recent_data.
+2024-09-27 02:19:32,102 - INFO - Original date_time string: 2024-09-23 01:33:57
+2024-09-27 02:19:32,102 - INFO - Parsed date_time: 2024-09-23 01:33:57
+2024-09-27 02:19:32,102 - INFO - Entry from 2024-09-23 01:33:57 added to recent_data.
+2024-09-27 02:19:32,102 - INFO - Original date_time string: 2024-09-23 05:49:04
+2024-09-27 02:19:32,102 - INFO - Parsed date_time: 2024-09-23 05:49:04
+2024-09-27 02:19:32,102 - INFO - Entry from 2024-09-23 05:49:04 added to recent_data.
+2024-09-27 02:19:32,102 - INFO - Original date_time string: 2024-09-23 05:53:58
+2024-09-27 02:19:32,102 - INFO - Parsed date_time: 2024-09-23 05:53:58
+2024-09-27 02:19:32,102 - INFO - Entry from 2024-09-23 05:53:58 added to recent_data.
+2024-09-27 02:19:32,102 - INFO - Original date_time string: 2024-09-23 05:54:35
+2024-09-27 02:19:32,102 - INFO - Parsed date_time: 2024-09-23 05:54:35
+2024-09-27 02:19:32,102 - INFO - Entry from 2024-09-23 05:54:35 added to recent_data.
+2024-09-27 02:19:32,102 - INFO - Original date_time string: 2024-09-23 05:55:10
+2024-09-27 02:19:32,103 - INFO - Parsed date_time: 2024-09-23 05:55:10
+2024-09-27 02:19:32,103 - INFO - Entry from 2024-09-23 05:55:10 added to recent_data.
+2024-09-27 02:19:32,103 - INFO - Original date_time string: 2024-09-23 05:55:42
+2024-09-27 02:19:32,103 - INFO - Parsed date_time: 2024-09-23 05:55:42
+2024-09-27 02:19:32,103 - INFO - Entry from 2024-09-23 05:55:42 added to recent_data.
+2024-09-27 02:19:32,103 - INFO - Original date_time string: 2024-09-23 05:56:41
+2024-09-27 02:19:32,103 - INFO - Parsed date_time: 2024-09-23 05:56:41
+2024-09-27 02:19:32,103 - INFO - Entry from 2024-09-23 05:56:41 added to recent_data.
+2024-09-27 02:19:32,103 - INFO - Original date_time string: 2024-09-23 15:26:48
+2024-09-27 02:19:32,103 - INFO - Parsed date_time: 2024-09-23 15:26:48
+2024-09-27 02:19:32,103 - INFO - Entry from 2024-09-23 15:26:48 added to recent_data.
+2024-09-27 02:19:32,103 - INFO - Original date_time string: 2024-09-23 15:34:02
+2024-09-27 02:19:32,103 - INFO - Parsed date_time: 2024-09-23 15:34:02
+2024-09-27 02:19:32,103 - INFO - Entry from 2024-09-23 15:34:02 added to recent_data.
+2024-09-27 02:19:32,103 - INFO - Original date_time string: 2024-09-23 15:35:22
+2024-09-27 02:19:32,103 - INFO - Parsed date_time: 2024-09-23 15:35:22
+2024-09-27 02:19:32,103 - INFO - Entry from 2024-09-23 15:35:22 added to recent_data.
+2024-09-27 02:19:32,103 - INFO - Original date_time string: 2024-09-23 15:36:25
+2024-09-27 02:19:32,104 - INFO - Parsed date_time: 2024-09-23 15:36:25
+2024-09-27 02:19:32,104 - INFO - Entry from 2024-09-23 15:36:25 added to recent_data.
+2024-09-27 02:19:32,104 - INFO - Original date_time string: 2024-09-23 16:34:53
+2024-09-27 02:19:32,104 - INFO - Parsed date_time: 2024-09-23 16:34:53
+2024-09-27 02:19:32,104 - INFO - Entry from 2024-09-23 16:34:53 added to recent_data.
+2024-09-27 02:19:32,104 - INFO - Original date_time string: 2024-09-23 17:54:41
+2024-09-27 02:19:32,104 - INFO - Parsed date_time: 2024-09-23 17:54:41
+2024-09-27 02:19:32,104 - INFO - Entry from 2024-09-23 17:54:41 added to recent_data.
+2024-09-27 02:19:32,104 - INFO - Original date_time string: 2024-09-24 00:19:46
+2024-09-27 02:19:32,104 - INFO - Parsed date_time: 2024-09-24 00:19:46
+2024-09-27 02:19:32,104 - INFO - Entry from 2024-09-24 00:19:46 added to recent_data.
+2024-09-27 02:19:32,104 - INFO - Total entries found within the date range: 36
+2024-09-27 02:19:32,104 - INFO - Checking if value 100.0 is within 5 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,104 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,104 - INFO - Checking if value 100.0 is within 5 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,104 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,104 - INFO - Checking if value 100.0 is within 5 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 100.0 is within 5 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,105 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,105 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,106 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,106 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,107 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,107 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,108 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,108 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,108 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,108 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,108 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,108 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,108 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,108 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,108 - INFO - Checking if value 109.0 is within 5 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,108 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,108 - INFO - Attempt 1: Found 0 entries within 5 tolerance.
+2024-09-27 02:19:32,108 - INFO - No data found within 5 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,108 - INFO - Checking if value 100.0 is within 15 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,108 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 100.0 is within 15 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 100.0 is within 15 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,109 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,109 - INFO - Checking if value 100.0 is within 15 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,110 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,110 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,111 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,111 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Checking if value 109.0 is within 15 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Attempt 2: Found 0 entries within 15 tolerance.
+2024-09-27 02:19:32,112 - INFO - No data found within 15 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,112 - INFO - Checking if value 100.0 is within 25 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,112 - INFO - Checking if value 100.0 is within 25 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,112 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 100.0 is within 25 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 100.0 is within 25 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,113 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,113 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,114 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,114 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,115 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,115 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Checking if value 109.0 is within 25 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Attempt 3: Found 0 entries within 25 tolerance.
+2024-09-27 02:19:32,116 - INFO - No data found within 25 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,116 - INFO - Checking if value 100.0 is within 35 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Checking if value 100.0 is within 35 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,116 - INFO - Checking if value 100.0 is within 35 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,116 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,117 - INFO - Checking if value 100.0 is within 35 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,117 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,118 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,118 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,119 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,119 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Checking if value 109.0 is within 35 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Attempt 4: Found 0 entries within 35 tolerance.
+2024-09-27 02:19:32,120 - INFO - No data found within 35 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,120 - INFO - Checking if value 100.0 is within 45 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Checking if value 100.0 is within 45 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,120 - INFO - Checking if value 100.0 is within 45 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,120 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 100.0 is within 45 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,121 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,121 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,122 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,122 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,123 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,123 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Checking if value 109.0 is within 45 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Attempt 5: Found 0 entries within 45 tolerance.
+2024-09-27 02:19:32,124 - INFO - No data found within 45 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,124 - INFO - Checking if value 100.0 is within 55 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Checking if value 100.0 is within 55 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,124 - INFO - Checking if value 100.0 is within 55 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,124 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 100.0 is within 55 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,125 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,125 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,126 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,126 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,127 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,127 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Checking if value 109.0 is within 55 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Attempt 6: Found 0 entries within 55 tolerance.
+2024-09-27 02:19:32,128 - INFO - No data found within 55 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,128 - INFO - Checking if value 100.0 is within 65 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Checking if value 100.0 is within 65 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Checking if value 100.0 is within 65 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,128 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,128 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 100.0 is within 65 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,129 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,129 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,130 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,130 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,131 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,131 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Checking if value 109.0 is within 65 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Attempt 7: Found 0 entries within 65 tolerance.
+2024-09-27 02:19:32,132 - INFO - No data found within 65 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,132 - INFO - Checking if value 100.0 is within 75 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Checking if value 100.0 is within 75 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Checking if value 100.0 is within 75 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,132 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,132 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 100.0 is within 75 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,133 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,133 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,134 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,134 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,135 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,135 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 109.0 is within 75 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Attempt 8: Found 0 entries within 75 tolerance.
+2024-09-27 02:19:32,136 - INFO - No data found within 75 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,136 - INFO - Checking if value 100.0 is within 85 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 100.0 is within 85 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 100.0 is within 85 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,136 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,136 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 100.0 is within 85 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,137 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,137 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,138 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,138 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,139 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,139 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,139 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,139 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,139 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,139 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,139 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,139 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,139 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,139 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,139 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,139 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,139 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,139 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Checking if value 109.0 is within 85 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Attempt 9: Found 0 entries within 85 tolerance.
+2024-09-27 02:19:32,140 - INFO - No data found within 85 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,140 - INFO - Checking if value 100.0 is within 95 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Checking if value 100.0 is within 95 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Checking if value 100.0 is within 95 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,140 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,140 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 100.0 is within 95 units of value 0.0. Difference: 100.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,141 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,141 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,142 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,142 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,143 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,143 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,144 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,144 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,144 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,144 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,144 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,144 - INFO - Checking if value 109.0 is within 95 units of value 0.0. Difference: 109.0
+2024-09-27 02:19:32,144 - INFO - Result: Out of tolerance
+2024-09-27 02:19:32,144 - INFO - Attempt 10: Found 0 entries within 95 tolerance.
+2024-09-27 02:19:32,144 - INFO - No data found within 95 units of initial price. Increasing tolerance...
+2024-09-27 02:19:32,144 - ERROR - No sufficient data even after increasing the tolerance to 105.
+2024-09-27 02:19:32,144 - INFO - Running first time configuration.

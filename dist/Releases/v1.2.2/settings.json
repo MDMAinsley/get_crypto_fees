@@ -1,0 +1,10 @@
+{
+    "do_setup": true,
+    "balance": 0.0,
+    "item_price": 0.0,
+    "run_headless": true,
+    "xmr_fees": 0.5,
+    "fiat_currency": "gbp",
+    "initial_crypto": "ltc",
+    "final_crypto": "xmr"
+}
