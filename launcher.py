@@ -99,13 +99,16 @@ def main():
         latest_version = normalize_version(latest_version_raw)
 
         if current_version != latest_version:
-            if specific_input(f"Update v{latest_version} is available, would you like to update? (y/n): ",
+            # Fetch the latest release information, including the release description
+            response = requests.get(latest_version_url)
+            response.raise_for_status()
+            latest_release = response.json()
+            release_description = latest_release.get('body', 'No description available.')
+            print(f"Update v{latest_version} is available.")
+            print(f"Changelog: {release_description}")
+            if specific_input(f"Update to v{latest_version}? (y/n): ",
                               ["y", "Y", "n", "N"]).lower() == "y":
                 print("Starting Update...")
-                # Find the download URL for the zip asset from the latest release
-                response = requests.get(latest_version_url)
-                latest_release = response.json()
-                # Example of finding the zip file in assets
                 target_asset_name = f"v{latest_version_raw}.zip"
                 download_url = None
                 for asset in latest_release['assets']:
